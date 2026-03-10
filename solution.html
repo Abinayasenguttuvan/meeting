@@ -1,0 +1,159 @@
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="features-section">
+    <div class="container">
+  
+      <h2 class="section-title">Secure and fast Remote Access</h2>
+  
+      <p class="section-desc">
+        AnyDesk offers flexible and adaptable solutions for educational institutions, with options
+        to either use our encrypted cloud solution or keep all data within a local network.
+        Choosing our <span class="highlight">On-Premises</span> option allows you to create a secure,
+        closed network, keeping full control over session and server data.
+      </p>
+  
+      <div class="features-grid">
+  
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Self-hosted solution</h3>
+          <p>
+            With AnyDesk On-Premises, educational institutions can securely host their
+            own network on-site, ensuring compliance with strict data policies.
+          </p>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Full feature & Brand customization</h3>
+          <p>
+            Customize the platform to fit your institution’s needs, from logo branding
+            to permissions and default settings.
+          </p>
+        </div>
+  
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>High scalability</h3>
+          <p>
+            Our scalable solutions cater to institutions of all sizes. Start small and
+            scale quickly with reliable remote connections.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <Style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.features-section{
+padding:80px 20px;
+background:#f5f5f5;
+text-align:center;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:42px;
+font-weight:600;
+margin-bottom:20px;
+color:#111;
+}
+
+.section-desc{
+max-width:800px;
+margin:auto;
+font-size:16px;
+line-height:1.7;
+color:#666;
+margin-bottom:60px;
+}
+
+.highlight{
+color:#ff3c2f;
+font-weight:600;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.feature-card{
+padding:20px;
+transition:0.4s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.icon{
+font-size:40px;
+color:#ff3c2f;
+margin-bottom:20px;
+}
+
+.feature-card h3{
+font-size:22px;
+margin-bottom:15px;
+color:#ff3c2f;
+}
+
+.feature-card p{
+font-size:15px;
+color:#555;
+line-height:1.6;
+}
+
+@media (max-width:992px){
+
+.features-grid{
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+}
+
+@media (max-width:600px){
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.section-desc{
+font-size:14px;
+}
+
+}
+  </Style>

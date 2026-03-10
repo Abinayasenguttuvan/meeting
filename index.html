@@ -1,0 +1,3854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<title>Stackly Teams </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+
+</head>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+<body>
+    
+
+<header class="header" id="header">
+
+<div class="nav-container">
+
+<!-- STACKLY LOGO -->
+
+<div class="logo">
+    <a href="./index.html">
+<img src="./logo.webp" alt="Stackly Logo"></a>
+</div>
+
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+<ul class="nav-menu" id="navMenu">
+
+<li class="dropdown">
+
+<a href="./index.html" class="active">Home ▾</a>
+
+<div class="dropdown-menu">
+<a href="./index.html">Home 1</a>
+<a href="./home2.html">Home 2</a>
+</div>
+
+</li>
+
+<li><a href="./about.html">About</a></li>
+<li><a href="./pricing.html">Pricing</a></li>
+<li><a href="./features.html">features</a></li>
+<li><a href="./contact.html">Contact</a></li>
+<li><a href="./dashboard.html">Dashboard</a></li>
+
+<li class="nav-buttons">
+
+<span class="dark-toggle" id="darkToggle">🌙</span>
+
+<a href="login.html" class="login-btn">Login</a>
+<a href="signup.html" class="signup-btn">Sign Up</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</header>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+<!-- -------------------- -->
+
+
+<section class="stackly-hero">
+
+    <video class="stackly-hero-bg" autoplay muted loop playsinline>
+    <source src="./bg.mp4" type="video/mp4">
+    </video>
+    
+    <div class="stackly-hero-overlay"></div>
+    
+    <div class="stackly-hero-container">
+    
+    <!-- LEFT CONTENT -->
+    
+    <div class="stackly-hero-text">
+    
+    <h1 class="stackly-hero-title">
+    Collaborate From Anywhere
+    </h1>
+    
+    <p class="stackly-hero-desc">
+    With Stackly Meetings, your team can collaborate through video calls,
+    screen sharing, messaging and file sharing — all in one platform.
+    </p>
+    
+    <div class="stackly-hero-buttons">
+    
+    <button class="stackly-btn-primary" onclick="stacklyStartMeeting()">
+    Start Meeting
+    </button>
+    
+    <button class="stackly-btn-secondary" onclick="stacklyScheduleMeeting()">
+    Schedule Meeting
+    </button>
+    
+    </div>
+    
+    <div class="stackly-meeting-input">
+    
+    <input type="text" id="stacklyMeetingCode" placeholder="Enter meeting code">
+    
+    <button onclick="stacklyJoinMeeting()">Join</button>
+    
+    </div>
+    
+    <div class="stackly-error" id="stacklyErrorText">
+    Please enter meeting code
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGE -->
+    
+    <div class="stackly-hero-image">
+    
+    <img src="./meet.webp" alt="meeting image">
+    
+    
+    <div class="stackly-float-card card1">
+    ⭐ 4.9 Google Rating
+    </div>
+    
+    <div class="stackly-float-card card2">
+    👨‍💻 Meet Our Experts
+    </div>
+    
+    <div class="stackly-float-card card3">
+    🌍 Collaborate Everywhere
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <style>
+        .stackly-hero{
+position:relative;
+width:100%;
+min-height:100vh;
+display:flex;
+align-items:center;
+overflow:hidden;
+}
+
+.stackly-hero-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:0;
+}
+
+.stackly-hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+/* background:rgba(0,0,0,0.45); */
+z-index:1;
+}
+
+.stackly-hero-container{
+position:relative;
+z-index:2;
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:60px;
+padding:80px 20px;
+color:white;
+}
+
+/* LEFT CONTENT */
+
+.stackly-hero-text{
+flex:1;
+animation:stacklyFadeUp 1s ease forwards;
+}
+
+.stackly-hero-title{
+font-size:64px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.stackly-hero-desc{
+font-size:18px;
+margin-bottom:30px;
+max-width:500px;
+}
+
+/* BUTTONS */
+
+.stackly-hero-buttons{
+display:flex;
+gap:15px;
+margin-bottom:25px;
+}
+
+.stackly-btn-primary{
+background: rgb(4, 49, 4);
+border:none;
+padding:14px 28px;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.stackly-btn-secondary{
+background:white;
+color:#111;
+border:none;
+padding:14px 28px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* MEETING INPUT */
+
+.stackly-meeting-input{
+display:flex;
+gap:10px;
+}
+
+.stackly-meeting-input input{
+padding:12px;
+border:none;
+border-radius:5px;
+width:220px;
+}
+
+.stackly-meeting-input button{
+padding:12px 20px;
+background:rgb(4, 49, 4);
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.stackly-error{
+color:rgb(4, 49, 4);
+margin-top:10px;
+display:none;
+}
+
+/* RIGHT IMAGE */
+
+.stackly-hero-image{
+flex:1;
+position:relative;
+animation:stacklyFadeUp 1.5s ease forwards;
+}
+
+.stackly-hero-image img{
+width:100%;
+max-width:520px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* FLOATING CARDS */
+
+.stackly-float-card{
+position:absolute;
+background:white;
+color:#111;
+padding:10px 16px;
+border-radius:10px;
+font-size:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+animation:stacklyFloat 4s ease-in-out infinite;
+}
+
+.card1{
+top:10%;
+right:5%;
+}
+
+.card2{
+bottom:20%;
+left:-20px;
+}
+
+.card3{
+bottom:0;
+right:15%;
+}
+
+/* ANIMATIONS */
+
+@keyframes stacklyFadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes stacklyFloat{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+
+@media (max-width:1024px){
+
+.stackly-hero-title{
+font-size:48px;
+}
+
+.stackly-hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.stackly-hero-image img{
+max-width:420px;
+}
+
+}
+
+@media (max-width:768px){
+
+.stackly-hero-title{
+font-size:36px;
+}
+
+.stackly-meeting-input{
+flex-direction:column;
+align-items:center;
+}
+
+.stackly-meeting-input input{
+width:100%;
+max-width:260px;
+}
+
+}
+
+@media (max-width:480px){
+
+.stackly-hero-title{
+font-size:30px;
+}
+
+.stackly-hero-desc{
+font-size:15px;
+}
+
+.stackly-hero-buttons{
+flex-direction:column;
+}
+
+.stackly-float-card{
+font-size:12px;
+padding:8px 12px;
+}
+
+}
+        </style>
+
+        <script>
+            
+
+function stacklyStartMeeting(){
+window.location.href="404.html";
+}
+
+function stacklyScheduleMeeting(){
+window.location.href="404.html";
+}
+
+function stacklyJoinMeeting(){
+
+let code=document.getElementById("stacklyMeetingCode").value.trim();
+
+let error=document.getElementById("stacklyErrorText");
+
+if(code===""){
+error.style.display="block";
+}
+else{
+window.location.href="404.html";
+}
+
+}
+
+</script>
+
+<!-- ------------------- -->
+
+<section class="stk-about-section">
+
+    <h2 class="stk-about-title" data-aos="fade-up">Who We Are & What's New</h2>
+    
+    <div class="stk-about-wrapper">
+    
+    <!-- LEFT IMAGE -->
+    <div class="stk-about-img-box" data-aos="fade-right">
+    
+    <div class="stk-img-container">
+    
+    <img src="./meet2.webp" class="stk-about-img">
+    
+    <div class="stk-img-overlay">
+    
+    <lottie-player 
+    src="https://assets2.lottiefiles.com/packages/lf20_usmfx6bp.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay>
+    </lottie-player>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- CENTER CONTENT -->
+    <div class="stk-about-center">
+    
+    <div class="stk-about-item" data-aos="fade-up">
+    
+    <div class="stk-dot"></div>
+    
+    <lottie-player
+    src="https://assets10.lottiefiles.com/packages/lf20_tno6cg2w.json"
+    background="transparent"
+    speed="1"
+    style="width:60px">
+    </lottie-player>
+    
+    <h3>Who We Are</h3>
+    
+    <p>
+    Stackly is a modern collaboration platform designed to make
+    online meetings faster, smarter and more productive for teams.
+    </p>
+    
+    </div>
+    
+    
+    <div class="stk-about-item" data-aos="fade-up" data-aos-delay="200">
+    
+    <div class="stk-dot"></div>
+    
+    <lottie-player
+    src="https://assets4.lottiefiles.com/packages/lf20_5ngs2ksb.json"
+    background="transparent"
+    speed="1"
+    style="width:60px">
+    </lottie-player>
+    
+    <h3>Our Mission</h3>
+    
+    <p>
+    We help teams collaborate seamlessly through video meetings,
+    screen sharing and real-time communication tools.
+    </p>
+    
+    </div>
+    
+    
+    <div class="stk-about-item" data-aos="fade-up" data-aos-delay="400">
+    
+    <div class="stk-dot"></div>
+    
+    <lottie-player
+    src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
+    background="transparent"
+    speed="1"
+    style="width:60px">
+    </lottie-player>
+    
+    <h3>What's New</h3>
+    
+    <p>
+    Stackly now includes AI meeting summaries, smart scheduling,
+    and improved team collaboration features.
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGE -->
+    <div class="stk-about-img-box" data-aos="fade-left">
+    
+    <div class="stk-img-container">
+    
+    <img src="./meet1.webp" class="stk-about-img">
+    
+    <div class="stk-img-overlay">
+    
+    <lottie-player
+    src="https://assets2.lottiefiles.com/packages/lf20_usmfx6bp.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay>
+    </lottie-player>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+    <style>
+        /* SECTION */
+
+.stk-about-section{
+
+padding:100px 6%;
+background:#f8fafc;
+font-family:Arial, sans-serif;
+
+}
+
+
+/* TITLE */
+
+.stk-about-title{
+
+text-align:center;
+font-size:40px;
+font-weight:800;
+margin-bottom:80px;
+color:#0f172a;
+
+}
+
+
+/* GRID */
+
+.stk-about-wrapper{
+
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+align-items:center;
+gap:40px;
+
+}
+
+
+/* IMAGE BOX */
+
+.stk-img-container{
+
+position:relative;
+overflow:hidden;
+border-radius:60px;
+
+}
+
+
+/* IMAGE */
+
+.stk-about-img{
+
+width:320px;
+height:420px;
+object-fit:cover;
+
+animation:stkFloat 6s ease-in-out infinite;
+
+transition:transform .4s;
+
+}
+
+.stk-img-container:hover .stk-about-img{
+
+transform:scale(1.1);
+
+}
+
+
+/* HOVER OVERLAY */
+
+.stk-img-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+opacity:0;
+transition:.4s;
+
+}
+
+.stk-img-container:hover .stk-img-overlay{
+
+opacity:1;
+
+}
+
+
+/* TIMELINE */
+
+.stk-about-center{
+
+position:relative;
+padding:0 20px;
+
+}
+
+
+/* LINE */
+
+.stk-about-center::before{
+
+content:"";
+position:absolute;
+left:20px;
+top:0;
+bottom:0;
+width:3px;
+background:rgb(4, 49, 4);
+
+}
+
+
+/* ITEM */
+
+.stk-about-item{
+
+margin-bottom:60px;
+padding-left:60px;
+position:relative;
+
+}
+
+
+/* DOT */
+
+.stk-dot{
+
+position:absolute;
+left:10px;
+top:8px;
+width:18px;
+height:18px;
+background:linear-gradient(135deg,#c3d1cc,#37977c);
+border-radius:50%;
+box-shadow:0 0 0 6px rgba(37,99,235,0.2);
+
+}
+
+
+/* TEXT */
+
+.stk-about-item h3{
+
+font-size:22px;
+margin:10px 0;
+color:#0f172a;
+
+}
+
+.stk-about-item p{
+
+font-size:15px;
+line-height:1.6;
+color:# black;
+
+}
+
+
+/* FLOAT ANIMATION */
+
+@keyframes stkFloat{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-20px)}
+
+100%{transform:translateY(0)}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.stk-about-wrapper{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.stk-about-center::before{
+
+left:50%;
+transform:translateX(-50%);
+
+}
+
+.stk-about-item{
+
+padding-left:0;
+
+}
+
+.stk-dot{
+
+left:50%;
+transform:translateX(-50%);
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stk-about-title{
+
+font-size:28px;
+
+}
+
+.stk-about-img{
+
+width:240px;
+height:320px;
+
+}
+
+}
+    </style>
+        
+
+<!-- ------------------- -->
+
+
+
+
+<section class="stackly-network-section">
+
+    <div class="stackly-network-container">
+    
+    <!-- LEFT CONTENT -->
+    
+    <div class="stackly-network-content">
+    
+    <h2 class="stackly-network-title">
+    Connect Teams Across The Globe
+    </h2>
+    
+    <div class="stackly-network-points">
+    
+    <div class="stackly-network-point">
+    🌍 Global meetings without borders
+    </div>
+    
+    <div class="stackly-network-point">
+    ⚡ Ultra-fast real-time collaboration
+    </div>
+    
+    <div class="stackly-network-point">
+    🤝 Work together from anywhere
+    </div>
+    
+    <div class="stackly-network-point">
+    🔒 Enterprise-grade secure communication
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT MAP -->
+    
+    <div class="stackly-network-map">
+    
+    <div class="stackly-map-bg"></div>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+    class="stackly-world-map">
+    
+    
+    <!-- DATA WAVES -->
+    
+    <div class="stackly-wave wave1"></div>
+    <div class="stackly-wave wave2"></div>
+    <div class="stackly-wave wave3"></div>
+    
+    
+    <!-- GLOW DOTS -->
+    
+    <div class="stackly-node n1"></div>
+    <div class="stackly-node n2"></div>
+    <div class="stackly-node n3"></div>
+    <div class="stackly-node n4"></div>
+    
+    
+    <!-- AVATARS -->
+    
+    <div class="stackly-user u1">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg">
+    </div>
+    
+    <div class="stackly-user u2">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+    </div>
+    
+    <div class="stackly-user u3">
+    <img src="https://randomuser.me/api/portraits/women/68.jpg">
+    </div>
+    
+    
+    <!-- CONNECTION LINES -->
+    
+    <svg class="stackly-network-lines">
+    
+    <line x1="25%" y1="40%" x2="50%" y2="50%" />
+    <line x1="50%" y1="50%" x2="75%" y2="35%" />
+    <line x1="50%" y1="50%" x2="40%" y2="70%" />
+    
+    </svg>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <style>
+        .stackly-network-section{
+padding:120px 20px;
+background:rgb(4, 49, 4);
+overflow:hidden;
+}
+
+.stackly-network-container{
+
+max-width:1200px;
+margin:auto;
+
+display:flex;
+align-items:center;
+gap:60px;
+
+}
+
+/* LEFT SIDE */
+
+.stackly-network-content{
+flex:1;
+}
+
+.stackly-network-title{
+
+font-size:46px;
+font-weight:800;
+margin-bottom:40px;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+
+}
+
+.stackly-network-points{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.stackly-network-point{
+
+background:white;
+
+padding:18px 28px;
+
+border-radius:50px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+font-size:16px;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+
+}
+
+/* RIGHT MAP */
+
+.stackly-network-map{
+flex:1;
+position:relative;
+}
+
+/* MAP BACKGROUND */
+
+.stackly-map-bg{
+
+position:absolute;
+width:100%;
+height:100%;
+
+background:url("https://www.transparenttextures.com/patterns/cubes.png");
+opacity:.15;
+
+}
+
+/* MAP IMAGE */
+
+.stackly-world-map{
+width:100%;
+opacity:.35;
+position:relative;
+z-index:2;
+}
+
+/* DATA WAVES */
+
+.stackly-wave{
+
+position:absolute;
+
+width:250px;
+height:250px;
+
+border:2px solid rgba(0,194,168,.4);
+
+border-radius:50%;
+
+animation:stacklyWave 4s linear infinite;
+
+}
+
+.wave1{top:35%;left:45%}
+.wave2{top:35%;left:45%;animation-delay:1s}
+.wave3{top:35%;left:45%;animation-delay:2s}
+
+@keyframes stacklyWave{
+
+0%{
+transform:scale(.2);
+opacity:1;
+}
+
+100%{
+transform:scale(2);
+opacity:0;
+}
+
+}
+
+/* GLOWING NODES */
+
+.stackly-node{
+
+position:absolute;
+width:14px;
+height:14px;
+
+background:linear-gradient(135deg,#c3d1cc,#37977c);
+
+border-radius:50%;
+
+animation:stacklyPulse 2s infinite;
+
+z-index:3;
+
+}
+
+.n1{top:40%;left:25%}
+.n2{top:50%;left:50%}
+.n3{top:35%;left:70%}
+.n4{top:65%;left:40%}
+
+@keyframes stacklyPulse{
+
+0%{box-shadow:0 0 0 0 rgba(0,194,168,.7)}
+70%{box-shadow:0 0 0 18px rgba(0,194,168,0)}
+100%{box-shadow:0 0 0 0 rgba(0,194,168,0)}
+
+}
+
+/* AVATARS */
+
+.stackly-user{
+
+position:absolute;
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+overflow:hidden;
+
+border:3px solid white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+animation:stacklyFloat 4s ease-in-out infinite;
+
+z-index:4;
+
+}
+
+.stackly-user img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.u1{top:30%;left:20%}
+.u2{top:45%;left:65%}
+.u3{top:60%;left:40%}
+
+@keyframes stacklyFloat{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+
+}
+
+/* CONNECTION LINES */
+
+.stackly-network-lines{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:2;
+pointer-events:none;
+
+}
+
+.stackly-network-lines line{
+
+stroke:#00c2a8;
+stroke-width:2;
+stroke-dasharray:8;
+
+animation:stacklyDash 6s linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes stacklyDash{
+
+from{stroke-dashoffset:0}
+to{stroke-dashoffset:100}
+
+}
+
+
+@media (max-width:1024px){
+
+.stackly-network-container{
+flex-direction:column;
+text-align:center;
+}
+
+.stackly-network-title{
+font-size:36px;
+}
+
+}
+
+@media (max-width:768px){
+
+.stackly-network-title{
+font-size:30px;
+}
+
+.stackly-network-point{
+font-size:14px;
+padding:14px 20px;
+}
+
+.stackly-user{
+width:40px;
+height:40px;
+}
+
+}
+
+@media (max-width:480px){
+
+.stackly-network-section{
+padding:80px 15px;
+}
+
+.stackly-network-title{
+font-size:24px;
+}
+
+.stackly-node{
+width:10px;
+height:10px;
+}
+
+}
+    </style>
+
+
+<script>
+    
+
+const stacklyItems=document.querySelectorAll(
+".stackly-network-title, .stackly-network-point"
+);
+
+const stacklyReveal=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{threshold:0.3});
+
+stacklyItems.forEach(el=>stacklyReveal.observe(el));
+
+
+</script>
+<!-- ------------------ -->
+
+<section class="stk-partner-section">
+
+    <h2 class="stk-partner-title">Built with Trusted Partners</h2>
+    <p class="stk-partner-sub">Our platform is powered by industry leading companies</p>
+    
+    <div class="stk-partner-slider">
+    
+    <div class="stk-partner-track">
+    
+    <!-- BRAND 1 -->
+    <div class="stk-partner-logo">
+    <img src="./IT1.webp" class="logo-gray">
+    <img src="./IT1.webp" class="logo-color">
+    </div>
+    
+    <!-- BRAND 2 -->
+    <div class="stk-partner-logo">
+    <img src="./IT2.webp" class="logo-gray">
+    <img src="./IT2.webp" class="logo-color">
+    </div>
+    
+    <!-- BRAND 3 -->
+    <div class="stk-partner-logo">
+    <img src="./IT3.webp" class="logo-gray">
+    <img src="./IT3.webp" class="logo-color">
+    </div>
+    
+    <!-- BRAND 4 -->
+    <div class="stk-partner-logo">
+    <img src="./IT4.webp" class="logo-gray">
+    <img src="./IT4.webp" class="logo-color">
+    </div>
+    
+    <!-- BRAND 5 -->
+    <div class="stk-partner-logo">
+    <img src="./IT5.webp" class="logo-gray">
+    <img src="./IT5.webp" class="logo-color">
+    </div>
+    
+    <!-- DUPLICATE FOR LOOP -->
+    <div class="stk-partner-logo">
+    <img src="./IT1.webp" class="logo-gray">
+    <img src="./IT1.webp" class="logo-color">
+    </div>
+    
+    <div class="stk-partner-logo">
+    <img src="./IT2.webp" class="logo-gray">
+    <img src="./IT2.webp" class="logo-color">
+    </div>
+    
+    <div class="stk-partner-logo">
+    <img src="./IT3.webp" class="logo-gray">
+    <img src="./IT3.webp" class="logo-color">
+    </div>
+    
+    <div class="stk-partner-logo">
+    <img src="./IT4.webp" class="logo-gray">
+    <img src="./IT4.webp" class="logo-color">
+    </div>
+    
+    <div class="stk-partner-logo">
+    <img src="./IT5.webp" class="logo-gray">
+    <img src="./IT5.webp" class="logo-color">
+    </div>
+    
+    </div>
+    </div>
+    
+    </section>
+
+    <style>
+        /* SECTION */
+
+.stk-partner-section{
+padding:80px 5%;
+text-align:center;
+background:#ffffff;
+font-family:Arial, sans-serif;
+overflow:hidden;
+}
+
+/* TITLE */
+
+.stk-partner-title{
+font-size:40px;
+font-weight:800;
+margin-bottom:10px;
+color:#0f172a;
+}
+
+.stk-partner-sub{
+font-size:16px;
+color: black;
+margin-bottom:50px;
+}
+
+/* SLIDER */
+
+.stk-partner-slider{
+width:100%;
+overflow:hidden;
+position:relative;
+}
+
+/* TRACK */
+
+.stk-partner-track{
+display:flex;
+align-items:center;
+gap:80px;
+width:max-content;
+animation:stkScroll 20s linear infinite;
+}
+
+/* LOGO BOX */
+
+.stk-partner-logo{
+position:relative;
+width:140px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+/* LOGO */
+
+.stk-partner-logo img{
+max-width:100%;
+position:absolute;
+transition:opacity .3s ease;
+}
+
+/* GRAY LOGO */
+
+.logo-gray{
+opacity:1;
+filter:grayscale(100%);
+}
+
+/* COLOR LOGO */
+
+.logo-color{
+opacity:0;
+}
+
+/* HOVER */
+
+.stk-partner-logo:hover .logo-gray{
+opacity:0;
+}
+
+.stk-partner-logo:hover .logo-color{
+opacity:1;
+filter:none;
+transform:scale(1.1);
+}
+
+/* PAUSE ON HOVER */
+
+.stk-partner-slider:hover .stk-partner-track{
+animation-play-state:paused;
+}
+
+/* SCROLL ANIMATION */
+
+@keyframes stkScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.stk-partner-title{
+font-size:32px;
+}
+
+.stk-partner-track{
+gap:60px;
+}
+
+.stk-partner-logo{
+width:120px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stk-partner-title{
+font-size:26px;
+}
+
+.stk-partner-sub{
+font-size:14px;
+}
+
+.stk-partner-track{
+gap:40px;
+animation-duration:16s;
+}
+
+.stk-partner-logo{
+width:100px;
+height:50px;
+}
+
+}
+    </style>
+
+<!-- --------------------- -->
+<section class="stackly-premium-section">
+
+    <!-- MOVING RIBBONS -->
+    
+    <div class="stackly-ribbon-wrapper">
+    
+    <div class="stackly-ribbon stackly-ribbon-one">
+    <div class="stackly-ribbon-track">
+    <span>✦ Secure Meetings ✦ HD Video ✦ Screen Sharing ✦ Team Collaboration ✦ Stackly Meet ✦</span>
+    <span>✦ Secure Meetings ✦ HD Video ✦ Screen Sharing ✦ Team Collaboration ✦ Stackly Meet ✦</span>
+    </div>
+    </div>
+    
+    <div class="stackly-ribbon stackly-ribbon-two">
+    <div class="stackly-ribbon-track reverse">
+    <span>✦ Remote Teams ✦ Work Anywhere ✦ Global Teams ✦ Real-time Chat ✦ Stackly Meet ✦</span>
+    <span>✦ Remote Teams ✦ Work Anywhere ✦ Global Teams ✦ Real-time Chat ✦ Stackly Meet ✦</span>
+    </div>
+    </div>
+    
+    </div>
+    
+    
+    <!-- FLOATING ICONS -->
+    
+    <div class="stackly-floating-icons">
+    
+    <div class="stackly-icon icon-video">
+    🎥
+    </div>
+    
+    <div class="stackly-icon icon-chat">
+    💬
+    </div>
+    
+    <div class="stackly-icon icon-share">
+    🖥️
+    </div>
+    
+    </div>
+    
+    
+    <!-- CONTENT -->
+    
+    <div class="stackly-content">
+    
+    <p class="stackly-tag">OUR SOLUTIONS</p>
+    
+    <h2>
+   Business Solutions <br>
+    With Stackly Meet
+    </h2>
+    
+    <p class="stackly-desc">
+    Stackly Meet enables teams to collaborate from anywhere with crystal clear
+    video meetings, instant messaging, screen sharing, and secure communication
+    tools built for modern businesses.
+    </p>
+    
+    </div>
+    
+    </section>
+
+
+    <style>
+        /* MAIN SECTION */
+
+.stackly-premium-section{
+position:relative;
+overflow:hidden;
+background:rgb(4, 49, 4);
+padding:140px 20px 100px;
+color:white;
+font-family:system-ui;
+}
+
+/* RIBBONS */
+
+.stackly-ribbon-wrapper{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:200px;
+pointer-events:none;
+}
+
+.stackly-ribbon{
+position:absolute;
+width:150%;
+left:-25%;
+white-space:nowrap;
+overflow:hidden;
+}
+
+.stackly-ribbon-one{
+top:20px;
+transform:rotate(-7deg);
+}
+
+.stackly-ribbon-two{
+top:110px;
+transform:rotate(6deg);
+}
+
+.stackly-ribbon-track{
+display:flex;
+gap:60px;
+font-size:20px;
+font-weight:600;
+color:#aef5df;
+animation:stacklyScroll 26s linear infinite;
+}
+
+.stackly-ribbon-track.reverse{
+animation-direction:reverse;
+}
+
+.stackly-ribbon-track span{
+display:flex;
+gap:60px;
+}
+
+@keyframes stacklyScroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+}
+
+
+/* CONTENT */
+
+.stackly-content{
+max-width:850px;
+margin:auto;
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+.stackly-tag{
+letter-spacing:3px;
+font-size:14px;
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+margin-bottom:18px;
+}
+
+.stackly-content h2{
+font-size:54px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:24px;
+}
+
+.stackly-desc{
+font-size:18px;
+line-height:1.7;
+color:#d7f5ec;
+max-width:650px;
+margin:auto;
+}
+
+
+/* FLOATING ICONS */
+
+.stackly-floating-icons{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.stackly-icon{
+position:absolute;
+font-size:30px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:50%;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:stacklyFloat 6s ease-in-out infinite;
+}
+
+.icon-video{
+top:40%;
+left:15%;
+animation-delay:0s;
+}
+
+.icon-chat{
+top:55%;
+right:18%;
+animation-delay:2s;
+}
+
+.icon-share{
+top:70%;
+left:35%;
+animation-delay:4s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes stacklyFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.stackly-content h2{
+font-size:40px;
+}
+
+.stackly-icon{
+width:50px;
+height:50px;
+font-size:24px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stackly-premium-section{
+padding:110px 20px 80px;
+}
+
+.stackly-content h2{
+font-size:32px;
+}
+
+.stackly-desc{
+font-size:16px;
+}
+
+.stackly-ribbon-track{
+font-size:16px;
+gap:40px;
+}
+
+.stackly-icon{
+display:none;
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.stackly-content h2{
+font-size:26px;
+}
+
+.stackly-tag{
+font-size:12px;
+}
+
+}
+    </style>
+    <!-- -------------- -->
+
+    <section class="stk-trust-section">
+
+        <div class="stk-trust-container">
+        
+        <!-- COLUMN 1 -->
+        <div class="stk-trust-box">
+        <h3>Trusted Partners</h3>
+        <div class="stk-trust-number" data-count="150">0</div>
+        <p>Global Technology Partners</p>
+        </div>
+        
+        <!-- COLUMN 2 -->
+        <div class="stk-trust-box">
+        <h3>Trusted Reviews</h3>
+        <div class="stk-trust-number" data-count="3200">0</div>
+        <p>Verified Customer Reviews</p>
+        </div>
+        
+        <!-- COLUMN 3 -->
+        <div class="stk-trust-box">
+        <h3>Client Rating</h3>
+        
+        <div class="stk-stars">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        </div>
+        
+        <p class="stk-rating">4.9 / 5 Average Rating</p>
+        
+        </div>
+        
+        </div>
+        
+        
+        <!-- TYPEWRITER TESTIMONIAL -->
+        
+        <div class="stk-review-box">
+        
+        <p class="stk-quote">"</p>
+        
+        <div class="stk-typing-text">
+        <span id="stk-type"></span>
+        </div>
+        
+        <p class="stk-quote">"</p>
+        
+        </div>
+        
+        </section>
+
+        <style>
+            /* SECTION */
+
+.stk-trust-section{
+padding:90px 5%;
+background:#f8fafc;
+font-family:Arial, sans-serif;
+text-align:center;
+}
+
+/* GRID */
+
+.stk-trust-container{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+align-items:center;
+}
+
+/* COLUMN */
+
+.stk-trust-box{
+padding:40px;
+position:relative;
+}
+
+/* DIVIDER LINE */
+
+.stk-trust-box:not(:last-child)::after{
+content:"";
+position:absolute;
+right:0;
+top:20%;
+height:60%;
+width:1px;
+background:#d1d5db;
+}
+
+/* TITLES */
+
+.stk-trust-box h3{
+font-size:22px;
+margin-bottom:15px;
+font-weight:700;
+color:rgb(4, 49, 4);
+}
+
+/* NUMBER */
+
+.stk-trust-number{
+font-size:42px;
+font-weight:800;
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+margin-bottom:10px;
+}
+
+/* STARS */
+
+.stk-stars{
+font-size:28px;
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+display:flex;
+justify-content:center;
+gap:4px;
+margin-bottom:8px;
+animation:stkStarPop 1s ease forwards;
+}
+
+/* STAR ANIMATION */
+
+@keyframes stkStarPop{
+
+0%{
+transform:scale(0);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* RATING */
+
+.stk-rating{
+font-size:16px;
+color:#24533c;
+}
+
+/* REVIEW BOX */
+
+.stk-review-box{
+margin-top:60px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+font-size:20px;
+line-height:1.6;
+color:#334155;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+}
+
+/* QUOTES */
+
+.stk-quote{
+font-size:40px;
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+}
+
+/* TYPE TEXT */
+
+.stk-typing-text{
+font-style:italic;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.stk-trust-container{
+grid-template-columns:1fr;
+}
+
+.stk-trust-box:not(:last-child)::after{
+display:none;
+}
+
+.stk-trust-box{
+border-bottom:1px solid #e5e7eb;
+}
+
+}
+
+@media(max-width:768px){
+
+.stk-trust-number{
+font-size:34px;
+}
+
+.stk-review-box{
+font-size:18px;
+padding:0 10px;
+}
+
+}
+        </style>
+
+<script>
+
+    /* COUNTING NUMBERS */
+    
+    const counters=document.querySelectorAll(".stk-trust-number");
+    
+    counters.forEach(counter=>{
+    
+    const update=()=>{
+    
+    const target=+counter.getAttribute("data-count");
+    const count=+counter.innerText;
+    
+    const speed=200;
+    
+    const inc=target/speed;
+    
+    if(count<target){
+    counter.innerText=Math.ceil(count+inc);
+    setTimeout(update,20);
+    }else{
+    counter.innerText=target;
+    }
+    
+    };
+    
+    update();
+    
+    });
+    
+    
+    /* TYPEWRITER */
+    
+    const texts=[
+    
+    "Stackly made our remote meetings seamless and incredibly productive.",
+    
+    "The video quality and collaboration tools are better than any platform we used.",
+    
+    "Our global teams connect effortlessly thanks to Stackly.",
+    
+    "Scheduling and joining meetings has never been this simple."
+    
+    ];
+    
+    let index=0;
+    let charIndex=0;
+    let currentText="";
+    let isDeleting=false;
+    
+    function typeEffect(){
+    
+    const element=document.getElementById("stk-type");
+    
+    if(index>=texts.length) index=0;
+    
+    currentText=texts[index];
+    
+    if(!isDeleting){
+    
+    element.textContent=currentText.substring(0,charIndex++);
+    if(charIndex>currentText.length){
+    isDeleting=true;
+    setTimeout(typeEffect,2000);
+    return;
+    }
+    
+    }else{
+    
+    element.textContent=currentText.substring(0,charIndex--);
+    
+    if(charIndex===0){
+    isDeleting=false;
+    index++;
+    }
+    
+    }
+    
+    setTimeout(typeEffect,isDeleting?40:60);
+    
+    }
+    
+    typeEffect();
+    
+    </script>
+<!-- ------------------------- -->
+
+<section class="stk-feature-section">
+
+    <h2 class="stk-feature-title" data-aos="fade-up">Our Powerful Features</h2>
+    
+    <div class="stk-feature-wrapper">
+    
+    <!-- LEFT IMAGES -->
+    <div class="stk-feature-images-left">
+    
+    <div class="stk-feature-img-box square" data-aos="fade-right">
+    
+    <img src="./meet1.webp" class="stk-feature-img">
+    
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
+    <p>3 Client Reviews</p>
+    </div>
+    
+    </div>
+    
+    <div class="stk-feature-img-box rectangle" data-aos="fade-right" data-aos-delay="200">
+    
+    <img src="./meet2.webp" class="stk-feature-img">
+    
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
+    <p>3 Client Reviews</p>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- CENTER CONTENT -->
+    <div class="stk-feature-content">
+    
+    <div class="stk-feature-card" data-aos="fade-up">
+    
+    <h3>HD Video Meetings</h3>
+    <p class="line">Crystal clear HD video meetings.</p>
+    <p class="line">Connect teams globally without interruptions.</p>
+    <p class="line">Reliable performance for remote collaboration.</p>
+    
+    </div>
+    
+    <div class="stk-feature-card" data-aos="fade-up" data-aos-delay="200">
+    
+    <h3>Screen Sharing</h3>
+    <p class="line">Share presentations instantly.</p>
+    <p class="line">Collaborate on projects in real time.</p>
+    <p class="line">Enhance productivity during meetings.</p>
+    
+    </div>
+    
+    <div class="stk-feature-card" data-aos="fade-up" data-aos-delay="400">
+    
+    <h3>Smart Scheduling</h3>
+    <p class="line">Schedule meetings quickly.</p>
+    <p class="line">Automated reminders and notifications.</p>
+    <p class="line">AI-powered meeting management.</p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGES -->
+    <div class="stk-feature-images-right">
+    
+    <div class="stk-feature-img-box rectangle" data-aos="fade-left">
+    
+    <img src="./meet3.webp" class="stk-feature-img">
+    
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
+    <p>3 Client Reviews</p>
+    </div>
+    
+    </div>
+    
+    <div class="stk-feature-img-box square" data-aos="fade-left" data-aos-delay="200">
+    
+    <img src="./meet6.webp" class="stk-feature-img">
+    
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
+    <p>3 Client Reviews</p>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <style>
+        /* SECTION */
+
+.stk-feature-section{
+padding:100px 6%;
+background:#f8fafc;
+font-family:Arial, sans-serif;
+}
+
+
+/* TITLE */
+
+.stk-feature-title{
+text-align:center;
+font-size:42px;
+font-weight:800;
+margin-bottom:80px;
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+}
+
+
+/* GRID */
+
+.stk-feature-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+
+/* IMAGE COLUMN */
+
+.stk-feature-images-left,
+.stk-feature-images-right{
+display:flex;
+flex-direction:column;
+gap:40px;
+align-items:center;
+}
+
+
+/* IMAGE BOX */
+
+.stk-feature-img-box{
+position:relative;
+overflow:hidden;
+cursor:pointer;
+transition:.4s;
+}
+
+
+/* SQUARE IMAGE */
+
+.stk-feature-img-box.square{
+width:260px;
+height:260px;
+border-radius:30px;
+}
+
+
+/* RECTANGLE IMAGE */
+
+.stk-feature-img-box.rectangle{
+width:260px;
+height:360px;
+border-radius:40px;
+}
+
+
+/* IMAGE */
+
+.stk-feature-img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:blur(3px);
+transition:.5s;
+}
+
+
+/* HOVER EFFECT */
+
+.stk-feature-img-box:hover .stk-feature-img{
+filter:blur(0);
+transform:scale(1.15);
+}
+
+
+/* CLIENT REVIEW BADGE */
+
+.stk-review-badge{
+position:absolute;
+bottom:15px;
+right:15px;
+
+background:white;
+border-radius:50%;
+
+width:90px;
+height:90px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+font-size:10px;
+text-align:center;
+}
+
+
+/* STARS */
+
+.stk-stars{
+color:linear-gradient(135deg,#c3d1cc,#37977c);
+font-size:14px;
+}
+
+
+/* CONTENT AREA */
+
+.stk-feature-content{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+
+/* CONTENT CARD */
+
+.stk-feature-card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* HEADING */
+
+.stk-feature-card h3{
+margin-bottom:10px;
+font-size:22px;
+color:#0f172a;
+}
+
+
+/* TEXT LINES */
+
+.line{
+opacity:0;
+transform:translateY(20px);
+animation:lineReveal 1s forwards;
+}
+
+.line:nth-child(2){animation-delay:.2s;}
+.line:nth-child(3){animation-delay:.4s;}
+.line:nth-child(4){animation-delay:.6s;}
+
+
+/* LINE ANIMATION */
+
+@keyframes lineReveal{
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.stk-feature-wrapper{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.stk-feature-images-left,
+.stk-feature-images-right{
+flex-direction:row;
+justify-content:center;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stk-feature-title{
+font-size:30px;
+}
+
+.stk-feature-img-box.square{
+width:180px;
+height:180px;
+}
+
+.stk-feature-img-box.rectangle{
+width:180px;
+height:260px;
+}
+
+.stk-review-badge{
+width:70px;
+height:70px;
+font-size:9px;
+}
+
+}
+    </style>
+
+
+
+
+<!-- --------------------- -->
+
+
+<section class="stackly-uses-section">
+
+    <h2 class="stackly-uses-title">
+    <span id="stacklyUsesType"></span>
+    </h2>
+    
+    <div class="stackly-uses-scroll">
+    
+    <div class="stackly-uses-track">
+    
+    <!-- CARD -->
+    <div class="stackly-uses-card">
+    
+    <img src="./meet.webp">
+    
+    <div class="stackly-uses-play" data-video="./bg.mp4">
+    ▶
+    </div>
+    
+    <div class="stackly-uses-info">
+    <h3>Contact Center</h3>
+    <p>Handle customer conversations with powerful video tools.</p>
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackly-uses-card">
+    
+    <img src="./corp1.webp">
+    
+    <div class="stackly-uses-play" data-video="./bg.mp4">
+    ▶
+    </div>
+    
+    <div class="stackly-uses-info">
+    <h3>Meetings</h3>
+    <p>Collaborate with your team anywhere.</p>
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackly-uses-card">
+    
+    <img src="./AI.webp">
+    
+    <div class="stackly-uses-play" data-video="./bg.mp4">
+    ▶
+    </div>
+    
+    <div class="stackly-uses-info">
+    <h3>AI Companion</h3>
+    <p>AI automatically summarizes meetings.</p>
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackly-uses-card">
+    
+    <img src="./soft.webp">
+    
+    <div class="stackly-uses-play" data-video="./bg.mp4">
+    ▶
+    </div>
+    
+    <div class="stackly-uses-info">
+    <h3>My Notes</h3>
+    <p>Save meeting highlights instantly.</p>
+    </div>
+    
+    </div>
+
+
+    <div class="stackly-uses-card">
+    
+        <img src="./meet.webp">
+        
+        <div class="stackly-uses-play" data-video="./bg.mp4">
+        ▶
+        </div>
+        
+        <div class="stackly-uses-info">
+        <h3>Contact Center</h3>
+        <p>Handle customer conversations with powerful video tools.</p>
+        </div>
+        
+        </div>
+        
+        
+        <div class="stackly-uses-card">
+        
+        <img src="./corp1.webp">
+        
+        <div class="stackly-uses-play" data-video="./bg.mp4">
+        ▶
+        </div>
+        
+        <div class="stackly-uses-info">
+        <h3>Meetings</h3>
+        <p>Collaborate with your team anywhere.</p>
+        </div>
+        
+        </div>
+        
+        
+        <div class="stackly-uses-card">
+        
+        <img src="./AI.webp">
+        
+        <div class="stackly-uses-play" data-video="./bg.mp4">
+        ▶
+        </div>
+        
+        <div class="stackly-uses-info">
+        <h3>AI Companion</h3>
+        <p>AI automatically summarizes meetings.</p>
+        </div>
+        
+        </div>
+        
+        
+        <div class="stackly-uses-card">
+        
+        <img src="./soft.webp">
+        
+        <div class="stackly-uses-play" data-video="./bg.mp4">
+        ▶
+        </div>
+        
+        <div class="stackly-uses-info">
+        <h3>My Notes</h3>
+        <p>Save meeting highlights instantly.</p>
+        </div>
+        
+        </div>
+        
+    
+    
+    </div>
+    </div>
+    
+    
+    <!-- VIDEO POPUP -->
+    
+    <div class="stackly-video-modal" id="stacklyVideoModal">
+    
+    <div class="stackly-video-box">
+    
+    <span class="stackly-video-close">✕</span>
+    
+    <iframe id="stacklyVideoFrame" allowfullscreen></iframe>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <Style>
+        .stackly-uses-section{
+padding:100px 20px;
+background:#f7f9fc;
+overflow:hidden;
+}
+
+.stackly-uses-title{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+min-height:50px;
+font-weight:600;
+}
+
+/* SCROLL AREA */
+
+.stackly-uses-scroll{
+overflow:hidden;
+}
+
+.stackly-uses-track{
+display:flex;
+gap:30px;
+animation:stacklyScroll 35s linear infinite;
+}
+
+/* PAUSE ON HOVER */
+
+.stackly-uses-scroll:hover .stackly-uses-track{
+animation-play-state:paused;
+}
+
+@keyframes stacklyScroll{
+
+0%{transform:translateX(0)}
+
+100%{transform:translateX(-50%)}
+
+}
+
+/* CARDS */
+
+.stackly-uses-card{
+
+min-width:280px;
+height:340px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+position:relative;
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+animation:stacklyFloat 6s ease-in-out infinite;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+
+}
+
+.stackly-uses-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.stackly-uses-card img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+@keyframes stacklyFloat{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-10px)}
+
+100%{transform:translateY(0)}
+
+}
+
+/* PLAY BUTTON */
+
+.stackly-uses-play{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:58px;
+height:58px;
+
+background:white;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+
+}
+
+/* HOVER INFO */
+
+.stackly-uses-info{
+
+position:absolute;
+
+bottom:0;
+left:0;
+width:100%;
+
+background:rgba(0,0,0,0.65);
+
+color:white;
+
+padding:20px;
+
+transform:translateY(100%);
+transition:0.4s;
+
+}
+
+.stackly-uses-card:hover .stackly-uses-info{
+transform:translateY(0);
+}
+
+/* VIDEO MODAL */
+
+.stackly-video-modal{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.85);
+
+display:none;
+
+align-items:center;
+justify-content:center;
+
+z-index:9999;
+
+}
+
+.stackly-video-box{
+
+width:80%;
+max-width:900px;
+
+position:relative;
+
+}
+
+.stackly-video-box iframe{
+
+width:100%;
+height:500px;
+
+}
+
+.stackly-video-close{
+
+position:absolute;
+top:-40px;
+right:0;
+
+font-size:30px;
+color:white;
+
+cursor:pointer;
+
+}
+
+@media (max-width:1024px){
+
+.stackly-uses-card{
+min-width:240px;
+height:310px;
+}
+
+.stackly-uses-title{
+font-size:32px;
+}
+
+}
+
+@media (max-width:768px){
+
+.stackly-uses-title{
+font-size:26px;
+}
+
+.stackly-uses-card{
+min-width:200px;
+height:270px;
+}
+
+.stackly-uses-play{
+width:48px;
+height:48px;
+font-size:18px;
+}
+
+}
+
+@media (max-width:480px){
+
+.stackly-uses-section{
+padding:80px 15px;
+}
+
+.stackly-uses-title{
+font-size:22px;
+}
+
+.stackly-uses-track{
+gap:20px;
+}
+
+.stackly-uses-card{
+min-width:180px;
+height:230px;
+}
+
+}
+    </Style>
+
+<script>
+
+    /* TYPEWRITER */
+    
+    const stacklyText="Various Uses of Stackly Meet";
+    
+    let stacklyIndex=0;
+    
+    function stacklyType(){
+    
+    if(stacklyIndex<stacklyText.length){
+    
+    document.getElementById("stacklyUsesType").innerHTML+=stacklyText.charAt(stacklyIndex);
+    
+    stacklyIndex++;
+    
+    setTimeout(stacklyType,60);
+    
+    }
+    
+    }
+    
+    stacklyType();
+    
+    
+    /* VIDEO MODAL */
+    
+    const stacklyModal=document.getElementById("stacklyVideoModal");
+    const stacklyFrame=document.getElementById("stacklyVideoFrame");
+    
+    document.querySelectorAll(".stackly-uses-play").forEach(btn=>{
+    
+    btn.addEventListener("click",()=>{
+    
+    stacklyModal.style.display="flex";
+    
+    stacklyFrame.src=btn.dataset.video;
+    
+    })
+    
+    });
+    
+    document.querySelector(".stackly-video-close").onclick=()=>{
+    
+    stacklyModal.style.display="none";
+    
+    stacklyFrame.src="";
+    
+    };
+    
+    
+    /* SCROLL REVEAL */
+    
+    const stacklyCards=document.querySelectorAll(".stackly-uses-card");
+    
+    const stacklyObserver=new IntersectionObserver(entries=>{
+    
+    entries.forEach(entry=>{
+    
+    if(entry.isIntersecting){
+    
+    entry.target.classList.add("show");
+    
+    }
+    
+    });
+    
+    },{threshold:0.3});
+    
+    stacklyCards.forEach(card=>stacklyObserver.observe(card));
+    
+    </script>
+
+
+    <!-- ------------------- -->
+
+    <section class="stk-how-section">
+
+        <div class="stk-how-container">
+        
+        <!-- LEFT IMAGE -->
+        <div class="stk-how-image-area reveal">
+        
+        <div class="stk-how-image-box">
+        
+        <img src="./meet3.webp" class="stk-bg-image" alt="Stackly meeting">
+        
+        <!-- <img src="./meet6.webp" class="stk-floating-img" alt="meeting team"> -->
+        
+        </div>
+        
+        </div>
+        
+        
+        <!-- RIGHT CONTENT -->
+        <div class="stk-how-content">
+        
+        <h2 class="stk-how-title reveal">How Stackly Meetings Work</h2>
+        
+        <div class="stk-steps">
+        
+        <div class="stk-step reveal">
+        <div class="stk-step-icon">📅</div>
+        <div class="stk-step-text">
+        <h3>Schedule a Meeting</h3>
+        <p>Create meetings instantly and invite participants.</p>
+        </div>
+        </div>
+        
+        <div class="stk-step reveal">
+        <div class="stk-step-icon">🔗</div>
+        <div class="stk-step-text">
+        <h3>Share Secure Link</h3>
+        <p>Send your meeting link with one click.</p>
+        </div>
+        </div>
+        
+        <div class="stk-step reveal">
+        <div class="stk-step-icon">🎥</div>
+        <div class="stk-step-text">
+        <h3>Start Video Meeting</h3>
+        <p>Join HD video meetings with crystal clear audio.</p>
+        </div>
+        </div>
+        
+        <div class="stk-step reveal">
+        <div class="stk-step-icon">🤝</div>
+        <div class="stk-step-text">
+        <h3>Collaborate Together</h3>
+        <p>Share screen, chat and collaborate in real time.</p>
+        </div>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </section>
+
+
+        <style>
+            /* SECTION */
+
+.stk-how-section{
+padding:100px 6%;
+background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+font-family:Arial, sans-serif;
+}
+
+
+/* LAYOUT */
+
+.stk-how-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+flex-wrap:wrap;
+}
+
+
+/* IMAGE AREA */
+
+.stk-how-image-area{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:320px;
+}
+
+
+/* IMAGE BOX */
+
+.stk-how-image-box{
+position:relative;
+width:580px;
+height:600px;
+overflow:hidden;
+border-radius:80px; /* semi circle corners */
+}
+
+
+/* BACKGROUND IMAGE */
+
+.stk-bg-image{
+width:100%;
+height:100%;
+object-fit:cover;
+animation:stkZoom 5s infinite alternate;
+}
+
+
+/* FLOATING SMALL IMAGE */
+
+.stk-floating-img{
+position:absolute;
+bottom:30px;
+right:-40px;
+width:170px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+animation:stkFloat 4s ease-in-out infinite;
+}
+
+
+/* CONTENT */
+
+.stk-how-content{
+flex:1;
+min-width:320px;
+}
+
+
+/* HEADING */
+
+.stk-how-title{
+font-size:46px;
+font-weight:800;
+margin-bottom:40px;
+color:#0f172a;
+}
+
+
+/* STEPS */
+
+.stk-steps{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+
+/* GLASSMORPHISM STEP */
+
+.stk-step{
+display:flex;
+align-items:center;
+gap:18px;
+padding:18px 25px;
+border-radius:60px;
+
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.4);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:all .4s ease;
+
+opacity:0;
+transform:translateY(40px);
+}
+
+
+/* ICON */
+
+.stk-step-icon{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+background:#2563eb;
+color:white;
+flex-shrink:0;
+}
+
+
+/* TEXT */
+
+.stk-step-text h3{
+margin:0;
+font-size:20px;
+font-weight:700;
+}
+
+.stk-step-text p{
+margin-top:4px;
+font-size:14px;
+color:#475569;
+}
+
+
+/* HOVER */
+
+.stk-step:hover{
+transform:translateX(12px);
+background:rgba(37,99,235,0.15);
+}
+
+
+/* REVEAL ACTIVE */
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* IMAGE ANIMATION */
+
+@keyframes stkZoom{
+0%{transform:scale(1)}
+100%{transform:scale(1.08)}
+}
+
+@keyframes stkFloat{
+0%{transform:translateY(0)}
+50%{transform:translateY(-18px)}
+100%{transform:translateY(0)}
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.stk-how-title{
+font-size:36px;
+}
+
+.stk-how-image-box{
+width:320px;
+height:520px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stk-how-container{
+flex-direction:column;
+text-align:center;
+}
+
+.stk-how-title{
+font-size:30px;
+}
+
+.stk-how-image-box{
+width:260px;
+height:420px;
+}
+
+.stk-floating-img{
+width:120px;
+right:-50px;
+}
+
+.stk-step{
+border-radius:25px;
+}
+
+}
+        </style>
+
+<script>
+
+    function revealElements(){
+    
+    const reveals=document.querySelectorAll(".reveal");
+    
+    reveals.forEach((el,index)=>{
+    
+    const windowHeight=window.innerHeight;
+    const elementTop=el.getBoundingClientRect().top;
+    
+    if(elementTop < windowHeight-120){
+    
+    setTimeout(()=>{
+    el.classList.add("active");
+    },index*200);
+    
+    }
+    
+    });
+    
+    }
+    
+    window.addEventListener("scroll",revealElements);
+    
+    </script>
+    <!-- ---------------------- -->
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:rgb(215, 229, 215);
+}
+
+/* MAIN SECTION */
+
+.pf-network-section{
+padding:80px 5%;
+text-align:center;
+}
+
+.pf-network-title{
+font-size:38px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.pf-network-subtitle{
+color:#666;
+margin-bottom:60px;
+}
+
+/* GRID */
+
+.pf-network-grid{
+
+display:grid;
+grid-template-columns:1fr 480px 1fr;
+align-items:center;
+gap:40px;
+
+}
+
+/* FEATURE CARD */
+
+.pf-feature-card{
+
+position:relative;
+border-radius:14px;
+overflow:hidden;
+margin-bottom:25px;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+/* CARD BACKGROUND IMAGE */
+
+.pf-feature-bg{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+transform:scale(1);
+transition:.35s;
+
+}
+
+/* COLOR OVERLAY */
+
+.pf-feature-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(10,30,90,.65);
+
+}
+
+/* CARD CONTENT */
+
+.pf-feature-content{
+
+position:relative;
+z-index:2;
+padding:25px;
+color:white;
+
+}
+
+.pf-feature-title{
+
+font-weight:600;
+margin-top:10px;
+font-size:18px;
+
+}
+
+.pf-feature-text{
+
+font-size:14px;
+opacity:.9;
+
+}
+
+.pf-feature-icon{
+
+width:65px;
+
+}
+
+/* HOVER EFFECT */
+
+.pf-feature-card:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+}
+
+.pf-feature-card:hover .pf-feature-bg{
+
+transform:scale(1.15);
+
+}
+
+/* CENTER NETWORK */
+
+.pf-network-center{
+
+position:relative;
+width:450px;
+height:450px;
+margin:auto;
+
+}
+
+#pfNetworkCanvas{
+
+width:100%;
+height:100%;
+
+}
+
+/* CENTRAL HUB */
+
+.pf-network-hub{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:120px;
+height:120px;
+border-radius:50%;
+background: rgb(4, 49, 4);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:18px;
+box-shadow:0 0 30px rgb(4, 49, 4);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.pf-network-grid{
+grid-template-columns:1fr;
+}
+
+.pf-network-center{
+width:320px;
+height:320px;
+}
+
+}
+
+@media(max-width:600px){
+
+.pf-network-title{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<section class="pf-network-section">
+
+<h2 class="pf-network-title" data-aos="fade-up">
+One Platform. Infinite Connections
+</h2>
+
+<p class="pf-network-subtitle" data-aos="fade-up">
+Connect teams, customers and partners from one unified platform.
+</p>
+
+
+<div class="pf-network-grid">
+
+<!-- LEFT FEATURES -->
+
+<div>
+
+<div class="pf-feature-card" data-aos="fade-right">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet1.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets1.lottiefiles.com/packages/lf20_4kx2q32n.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Collaboration</div>
+<div class="pf-feature-text">Work together with teams in real-time.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="pf-feature-card" data-aos="fade-right" data-aos-delay="200">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet2.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets9.lottiefiles.com/packages/lf20_gjmecwii.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Customer Support</div>
+<div class="pf-feature-text">Provide instant support worldwide.</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CENTER NETWORK -->
+
+<div class="pf-network-center" data-aos="zoom-in">
+
+<canvas id="pfNetworkCanvas"></canvas>
+
+<div class="pf-network-hub">
+Platform
+</div>
+
+</div>
+
+
+<!-- RIGHT FEATURES -->
+
+<div>
+
+<div class="pf-feature-card" data-aos="fade-left">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet3.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets2.lottiefiles.com/packages/lf20_khzniaya.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Marketing</div>
+<div class="pf-feature-text">Engage customers with campaigns.</div>
+
+</div>
+
+</div>
+
+
+<div class="pf-feature-card" data-aos="fade-left" data-aos-delay="200">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets5.lottiefiles.com/packages/lf20_5ngs2ksb.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Sales</div>
+<div class="pf-feature-text">Convert leads into loyal customers.</div>
+
+</div>
+
+</div>
+
+
+<div class="pf-feature-card" data-aos="fade-left" data-aos-delay="300">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet5.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets7.lottiefiles.com/packages/lf20_3rwasyjy.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Employee Engagement</div>
+<div class="pf-feature-text">Connect internal teams globally.</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+AOS.init({
+duration:1000,
+once:true
+});
+
+
+/* NETWORK ANIMATION */
+
+const pfCanvas=document.getElementById("pfNetworkCanvas");
+const pfCtx=pfCanvas.getContext("2d");
+
+pfCanvas.width=450;
+pfCanvas.height=450;
+
+let pfNodes=[];
+
+for(let i=0;i<28;i++){
+
+pfNodes.push({
+
+x:Math.random()*pfCanvas.width,
+y:Math.random()*pfCanvas.height,
+vx:(Math.random()-.5)*0.6,
+vy:(Math.random()-.5)*0.6
+
+});
+
+}
+
+function pfAnimateNetwork(){
+
+pfCtx.clearRect(0,0,pfCanvas.width,pfCanvas.height);
+
+for(let i=0;i<pfNodes.length;i++){
+
+let node=pfNodes[i];
+
+node.x+=node.vx;
+node.y+=node.vy;
+
+if(node.x<0||node.x>pfCanvas.width) node.vx*=-1;
+if(node.y<0||node.y>pfCanvas.height) node.vy*=-1;
+
+pfCtx.beginPath();
+pfCtx.arc(node.x,node.y,2,0,Math.PI*2);
+pfCtx.fillStyle="#4f6df5";
+pfCtx.fill();
+
+for(let j=i+1;j<pfNodes.length;j++){
+
+let node2=pfNodes[j];
+
+let dist=Math.hypot(node.x-node2.x,node.y-node2.y);
+
+if(dist<120){
+
+pfCtx.beginPath();
+pfCtx.moveTo(node.x,node.y);
+pfCtx.lineTo(node2.x,node2.y);
+pfCtx.strokeStyle="rgba(79,109,245,0.2)";
+pfCtx.stroke();
+
+}
+
+}
+
+}
+
+requestAnimationFrame(pfAnimateNetwork);
+
+}
+
+pfAnimateNetwork();
+
+</script>
+
+
+    
+<!-- ------------------------ -->
+
+<section id="stk-testimonials">
+
+    <div class="stk-test-container">
+    
+    <h2 class="stk-test-heading">
+    User Testimonials
+    </h2>
+    
+    <div class="stk-test-slider">
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Stackly Meet transformed how our remote teams collaborate.
+    The video quality and screen sharing are excellent.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Sarah Johnson</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card active">
+    
+    <img src="./meet1.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Stackly Meet helped our company scale meetings globally
+    while maintaining seamless communication.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>David Lee</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet2.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “From webinars to daily meetings,
+    Stackly Meet makes collaboration effortless.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Emily Clark</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet3.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Secure meetings and smooth collaboration tools
+    make Stackly Meet our go-to communication platform.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Michael Ross</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+    <style>
+        #stk-testimonials{
+padding:120px 20px;
+background:#f7f9fc;
+font-family:system-ui;
+overflow:hidden;
+}
+
+.stk-test-container{
+max-width:1200px;
+margin:auto;
+}
+
+.stk-test-heading{
+text-align:center;
+font-size:52px;
+font-weight:800;
+margin-bottom:60px;
+}
+
+/* slider */
+
+.stk-test-slider{
+display:flex;
+gap:20px;
+align-items:center;
+justify-content:center;
+}
+
+/* card */
+
+.stk-test-card{
+position:relative;
+flex:1;
+height:380px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+transition:all .5s ease;
+filter:brightness(.8);
+}
+
+.stk-test-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* center card */
+
+.stk-test-card.active{
+flex:2;
+filter:brightness(1);
+}
+
+/* hover expand */
+
+.stk-test-card:hover{
+flex:2.2;
+filter:brightness(1);
+}
+
+/* content overlay */
+
+.stk-test-content{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:30px;
+color:white;
+background:linear-gradient(transparent,rgba(0,0,0,.7));
+}
+
+/* quote */
+
+.stk-test-quote{
+font-size:18px;
+line-height:1.6;
+margin-bottom:20px;
+font-style:italic;
+}
+
+/* user */
+
+.stk-test-user{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.stk-test-user img{
+width:36px;
+height:36px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* tablet */
+
+@media(max-width:1024px){
+
+.stk-test-heading{
+font-size:42px;
+}
+
+.stk-test-card{
+height:340px;
+}
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.stk-test-slider{
+flex-direction:column;
+}
+
+.stk-test-card{
+width:100%;
+height:320px;
+flex:none;
+}
+
+.stk-test-card:hover{
+flex:none;
+}
+
+}
+
+/* small mobile */
+
+@media(max-width:480px){
+
+.stk-test-heading{
+font-size:30px;
+}
+
+.stk-test-quote{
+font-size:16px;
+}
+
+}
+        </style>
+
+<script>
+
+    const cards=document.querySelectorAll(".stk-test-card");
+    
+    cards.forEach(card=>{
+    card.addEventListener("mouseenter",()=>{
+    
+    cards.forEach(c=>c.classList.remove("active"));
+    card.classList.add("active");
+    
+    });
+    });
+    
+    </script>
+
+    
+
+
+<script src="./script.js"></script>
+</body>
+</html>

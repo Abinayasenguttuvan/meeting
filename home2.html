@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<title>Stackly Teams </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+
+</head>
+
+<body>
+    
+
+<header class="header" id="header">
+
+<div class="nav-container">
+
+<!-- STACKLY LOGO -->
+
+<div class="logo">
+    <a href="./index.html">
+<img src="./logo.webp" alt="Stackly Logo"></a>
+</div>
+
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+<ul class="nav-menu" id="navMenu">
+
+<li class="dropdown">
+
+<a href="./index.html" class="active">Home ▾</a>
+
+<div class="dropdown-menu">
+<a href="./index.html">Home 1</a>
+<a href="./home2.html">Home 2</a>
+</div>
+
+</li>
+
+<li><a href="./about.html">About</a></li>
+<li><a href="./pricing.html">Pricing</a></li>
+<li><a href="./features.html">features</a></li>
+<li><a href="./contact.html">Contact</a></li>
+<li><a href="./dashboard.html">Dashboard</a></li>
+<li class="nav-buttons">
+
+<span class="dark-toggle" id="darkToggle">🌙</span>
+
+<a href="login.html" class="login-btn">Login</a>
+<a href="signup.html" class="signup-btn">Sign Up</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+<!-- SAAS HERO SECTION -->
+<section id="saasHeroSection">
+
+    <div class="saasHero-slide saasHero-active" style="background-image:url('./meet1.webp');"></div>
+    <div class="saasHero-slide" style="background-image:url('./meet2.webp');"></div>
+    <div class="saasHero-slide" style="background-image:url('./meet3.webp');"></div>
+    
+    <div class="saasHero-container">
+    
+    <div class="saasHero-content">
+    
+    <h1>Smart Collaboration For Modern Teams</h1>
+    
+    <p>
+    Connect, collaborate, and manage your projects from anywhere with our powerful cloud-based platform.
+    </p>
+    
+    <div class="saasHero-buttons">
+    <a href="./404.html" class="saasHero-btnPrimary">Start Free</a>
+    <a href="./404.html" class="saasHero-btnOutline">View Demo</a>
+    </div>
+    
+    </div>
+    
+    <div class="saasHero-image">
+    <img src="meet5.webp" alt="dashboard">
+    </div>
+    
+    </div>
+    
+    <div class="saasHero-scroll"></div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* HERO WRAPPER */
+    
+    #saasHeroSection{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-family:Poppins, sans-serif;
+    }
+    
+    /* SLIDES */
+    
+    .saasHero-slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 1.4s ease;
+    }
+    
+    .saasHero-active{
+    opacity:1;
+    }
+    
+    /* OVERLAY */
+    
+    #saasHeroSection::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,rgba(0,0,0,0.75),rgba(0,0,0,0.4));
+    z-index:1;
+    }
+    
+    /* CONTAINER */
+    
+    .saasHero-container{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:1200px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    }
+    
+    /* CONTENT */
+    
+    .saasHero-content{
+    max-width:520px;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.08);
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    .saasHero-content h1{
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:20px;
+    }
+    
+    .saasHero-content p{
+    font-size:18px;
+    margin-bottom:28px;
+    opacity:0.9;
+    }
+    
+    /* BUTTONS */
+    
+    .saasHero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    }
+    
+    .saasHero-btnPrimary{
+    background:#ff6a00;
+    color:white;
+    padding:14px 28px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    }
+    
+    .saasHero-btnPrimary:hover{
+    background:#ff4500;
+    }
+    
+    .saasHero-btnOutline{
+    border:2px solid white;
+    padding:14px 28px;
+    border-radius:35px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    }
+    
+    .saasHero-btnOutline:hover{
+    background:white;
+    color:black;
+    }
+    
+    /* FLOATING IMAGE */
+    
+    .saasHero-image img{
+    width:520px;
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    animation:saasHeroFloat 5s ease-in-out infinite;
+    }
+    
+    @keyframes saasHeroFloat{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+    100%{transform:translateY(0)}
+    }
+    
+    /* SCROLL INDICATOR */
+    
+    .saasHero-scroll{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    width:26px;
+    height:42px;
+    border:2px solid white;
+    border-radius:20px;
+    z-index:3;
+    }
+    
+    .saasHero-scroll::after{
+    content:"";
+    position:absolute;
+    top:8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    animation:saasHeroScroll 2s infinite;
+    }
+    
+    @keyframes saasHeroScroll{
+    0%{opacity:0; transform:translate(-50%,0)}
+    50%{opacity:1}
+    100%{opacity:0; transform:translate(-50%,12px)}
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .saasHero-container{
+    flex-direction:column;
+    text-align:center;
+    }
+    
+    .saasHero-content{
+    padding:35px;
+    }
+    
+    .saasHero-content h1{
+    font-size:38px;
+    }
+    
+    .saasHero-buttons{
+    justify-content:center;
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #saasHeroSection{
+    height:auto;
+    padding:120px 0;
+    }
+    
+    .saasHero-content{
+    padding:28px;
+    }
+    
+    .saasHero-content h1{
+    font-size:28px;
+    }
+    
+    .saasHero-content p{
+    font-size:16px;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    <script>
+    
+    (function(){
+    
+    let slides=document.querySelectorAll("#saasHeroSection .saasHero-slide");
+    let index=0;
+    
+    function saasHeroSlider(){
+    
+    slides[index].classList.remove("saasHero-active");
+    
+    index=(index+1)%slides.length;
+    
+    slides[index].classList.add("saasHero-active");
+    
+    }
+    
+    setInterval(saasHeroSlider,4000);
+    
+    })();
+    
+    </script>
+
+<!-- ------ -->
+
+<!-- REMOTE CONTROL NEON SECTION -->
+<section id="rcNeoSection">
+
+    <div class="rcNeoWrapper">
+    
+    <!-- LEFT IMAGE -->
+    <div class="rcNeoImage rcNeoLeft">
+    <img src="./meet2.webp" alt="">
+    </div>
+    
+    
+    <!-- CENTER CONTENT -->
+    <div class="rcNeoContent">
+    
+    <h2 class="rcNeoQuote">
+    “Remote Control The System From Anywhere”
+    </h2>
+    
+    <p class="rcNeoText">
+    Access your devices securely from anywhere in the world.
+    Manage systems, transfer files, and support clients remotely
+    with ultra-fast encrypted connectivity.
+    </p>
+    
+    <a href="404.html" class="rcNeoBtn">Download Now</a>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGE -->
+    <div class="rcNeoImage rcNeoRight">
+    <img src="./meet1.webp" alt="">
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #rcNeoSection{
+    padding:120px 20px;
+    /* background:linear-gradient(135deg,#0f172a,#020617); */
+    overflow:hidden;
+    font-family:Poppins, sans-serif;
+    }
+    
+    /* WRAPPER */
+    
+    .rcNeoWrapper{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    }
+    
+    /* CONTENT */
+    
+    .rcNeoContent{
+    max-width:520px;
+    text-align:center;
+    color: black;
+    }
+    
+    /* NEON QUOTE */
+    
+    .rcNeoQuote{
+    font-size:40px;
+    line-height:1.3;
+    margin-bottom:20px;
+    color: black;
+    text-shadow:
+    0 0 10px #ecb870,
+    0 0 20px #ecb870,
+    0 0 40px #ecb870,
+    0 0 60px #ecb870,
+    animation:rcNeoGlow 2s infinite alternate;
+    }
+    
+    @keyframes rcNeoGlow{
+    from{
+    text-shadow:
+    0 0 10px #ecb870,
+    0 0 20px #ecb870,
+    }
+    to{
+    text-shadow:
+    0 0 20px #ecb870,
+    0 0 40px #ecb870,
+    0 0 80px #ecb870,
+    }
+    }
+    
+    .rcNeoText{
+    font-size:17px;
+    opacity:0.85;
+    margin-bottom:35px;
+    }
+    
+    /* GLASSMORPHISM BUTTON */
+    
+    .rcNeoBtn{
+    display:inline-block;
+    padding:15px 36px;
+    color:orange;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+    transition:0.4s;
+    }
+    
+    .rcNeoBtn:hover{
+    background:rgba(255,255,255,0.2);
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(0,255,255,0.5);
+    }
+    
+    /* IMAGES */
+    
+    .rcNeoImage{
+    width:320px;
+    }
+    
+    .rcNeoImage img{
+    width:100%;
+    border-radius:20px;
+    filter:blur(6px);
+    transition:0.5s;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    }
+    
+    .rcNeoImage img:hover{
+    filter:blur(0);
+    transform:scale(1.05);
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .rcNeoWrapper{
+    flex-direction:column;
+    }
+    
+    .rcNeoImage{
+    width:70%;
+    }
+    
+    .rcNeoQuote{
+    font-size:32px;
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #rcNeoSection{
+    padding:80px 15px;
+    }
+    
+    .rcNeoImage{
+    width:100%;
+    }
+    
+    .rcNeoQuote{
+    font-size:24px;
+    }
+    
+    .rcNeoText{
+    font-size:15px;
+    }
+    
+    }
+    
+    </style>
+
+
+<!-- ---------- -->
+
+<!-- DOWNLOAD PRO SECTION -->
+<section id="stackProDownloadSection">
+
+    <div class="stackProContainer">
+    
+    <!-- DEVICE ICON SCROLLER -->
+    
+    <div class="stackProDevices">
+    
+    <div class="stackProTrack">
+    
+    <div class="stackProDevice">
+    <img src="./im1.webp">
+    <span>Windows</span>
+    </div>
+    
+    <div class="stackProDevice">
+    <img src="im2.webp">
+    <span>macOS</span>
+    </div>
+    
+    <div class="stackProDevice">
+    <img src="im3.webp">
+    <span>Android</span>
+    </div>
+    
+    <div class="stackProDevice">
+    <img src="./im4.webp">
+    <span>iOS</span>
+    </div>
+    
+    <div class="stackProDevice">
+    <img src="./im5.webp">
+    <span>Linux</span>
+    </div>
+    
+    <div class="stackProDevice">
+    <img src="./im6.webp">
+    <span>ChromeOS</span>
+    </div>
+    
+    </div>
+    </div>
+    
+    
+    <!-- CONTENT AREA -->
+    
+    <div class="stackProContent">
+    
+    <!-- TEXT -->
+    
+    <div class="stackProText">
+    
+    <h4>Discover Remote Platform</h4>
+    
+    <h2 id="stackProTitle">Download For Windows</h2>
+    
+    <ul id="stackProList">
+    
+    <li>Fast remote desktop connection</li>
+    <li>Secure encrypted sessions</li>
+    <li>Session invitation links</li>
+    <li>Screen sharing support</li>
+    
+    </ul>
+    
+    <a href="404.html" class="stackProBtn">
+    Download Now
+    </a>
+    
+    </div>
+    
+    
+    <!-- IMAGE SIDE -->
+    
+    <div class="stackProImageWrapper">
+    
+    <div class="stackProGradient"></div>
+    
+    <img id="stackProImage"
+    src="./meet1.webp">
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackProDownloadSection{
+    padding:120px 20px;
+    background:#f9fafb;
+    font-family:Poppins,sans-serif;
+    overflow:hidden;
+    }
+    
+    .stackProContainer{
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    /* DEVICE SCROLL */
+    
+    .stackProDevices{
+    overflow:hidden;
+    margin-bottom:70px;
+    }
+    
+    .stackProTrack{
+    display:flex;
+    gap:60px;
+    animation:stackProScroll 18s linear infinite;
+    }
+    
+    .stackProDevice{
+    text-align:center;
+    min-width:110px;
+    opacity:.7;
+    }
+    
+    .stackProDevice img{
+    width:45px;
+    margin-bottom:8px;
+    }
+    
+    .stackProDevice span{
+    font-size:14px;
+    }
+    
+    @keyframes stackProScroll{
+    0%{transform:translateX(100%)}
+    100%{transform:translateX(-100%)}
+    }
+    
+    /* CONTENT */
+    
+    .stackProContent{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    }
+    
+    /* TEXT */
+    
+    .stackProText{
+    max-width:520px;
+    }
+    
+    .stackProText h4{
+    color:#ff4a4a;
+    margin-bottom:10px;
+    }
+    
+    .stackProText h2{
+    font-size:42px;
+    margin-bottom:20px;
+    }
+    
+    .stackProText ul{
+    padding-left:18px;
+    margin-bottom:30px;
+    }
+    
+    .stackProText li{
+    margin-bottom:10px;
+    }
+    
+    /* BUTTON */
+    
+    .stackProBtn{
+    display:inline-block;
+    background:#ff4a4a;
+    color:white;
+    padding:14px 32px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    }
+    
+    .stackProBtn:hover{
+    background:#e63b3b;
+    }
+    
+    /* IMAGE AREA */
+    
+    .stackProImageWrapper{
+    position:relative;
+    width:450px;
+    max-width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+    
+    /* GRADIENT SHAPE */
+    
+    .stackProGradient{
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:linear-gradient(135deg,#ff6a00,#ff2d55);
+    border-radius:50%;
+    filter:blur(80px);
+    z-index:0;
+    }
+    
+    /* IMAGE */
+    
+    .stackProImageWrapper img{
+    width:420px;
+    border-radius:12px;
+    position:relative;
+    z-index:1;
+    box-shadow:0 25px 50px rgba(0,0,0,0.25);
+    
+    animation:
+    stackProFloat 5s ease-in-out infinite,
+    stackProZoom 6s ease-in-out infinite;
+    }
+    
+    /* FLOAT ANIMATION */
+    
+    @keyframes stackProFloat{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-20px)}
+    100%{transform:translateY(0)}
+    }
+    
+    /* ZOOM ANIMATION */
+    
+    @keyframes stackProZoom{
+    0%{scale:1}
+    50%{scale:1.05}
+    100%{scale:1}
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackProContent{
+    flex-direction:column;
+    text-align:center;
+    }
+    
+    .stackProText h2{
+    font-size:34px;
+    }
+    
+    .stackProImageWrapper img{
+    width:360px;
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackProDownloadSection{
+    padding:80px 20px;
+    }
+    
+    .stackProText h2{
+    font-size:26px;
+    }
+    
+    .stackProTrack{
+    gap:35px;
+    }
+    
+    .stackProImageWrapper img{
+    width:100%;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    const stackProData=[
+    
+    {
+    title:"Download For Windows",
+    img:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7",
+    features:[
+    "Fast remote desktop connection",
+    "Secure encrypted sessions",
+    "Session invitation links",
+    "Screen sharing support"
+    ]
+    },
+    
+    {
+    title:"Download For macOS",
+    img:"./mac.webp",
+    features:[
+    "High performance remote access",
+    "Secure Mac device control",
+    "Multi monitor support",
+    "File transfer system"
+    ]
+    },
+    
+    {
+    title:"Download For Android",
+    img:"./android.webp",
+    features:[
+    "Control PC from mobile",
+    "Touch optimized interface",
+    "Quick device pairing",
+    "Secure connections"
+    ]
+    },
+    
+    {
+    title:"Download For iOS",
+    img:"./ios.webp",
+    features:[
+    "Remote iPhone access",
+    "Gesture control support",
+    "Fast streaming performance",
+    "Encrypted connections"
+    ]
+    }
+    
+    ];
+    
+    let stackIndex=0;
+    
+    function stackChange(){
+    
+    stackIndex=(stackIndex+1)%stackProData.length;
+    
+    document.getElementById("stackProTitle").innerText=
+    stackProData[stackIndex].title;
+    
+    document.getElementById("stackProImage").src=
+    stackProData[stackIndex].img;
+    
+    let listHTML="";
+    
+    stackProData[stackIndex].features.forEach(f=>{
+    listHTML+=`<li>${f}</li>`;
+    });
+    
+    document.getElementById("stackProList").innerHTML=listHTML;
+    
+    }
+    
+    setInterval(stackChange,4000);
+    
+    </script>
+    <!-- ---------- -->
+
+    <!-- FEATURES SECTION -->
+
+<section id="stackFeatureProSection">
+
+    <div class="stackFeatureProContainer">
+    
+    <div class="stackFeatureProHeader">
+    
+    <span class="stackFeatureProTag">● OUR BEST SERVICES</span>
+    
+    <h2>
+    Powerful Features for <br>
+    Seamless Online Meetings
+    </h2>
+    
+    </div>
+    
+    
+    <div class="stackFeatureProGrid">
+    
+    <!-- CARD 1 -->
+    
+    <div class="stackFeatureProCard">
+    
+    <p>
+    Host crystal-clear HD video meetings with advanced encryption and security.
+    Connect with your team, clients, and partners from anywhere without interruptions.
+    </p>
+    
+    <div class="stackFeatureProIcon">🎥</div>
+    
+    <h3>HD Video Meetings</h3>
+    
+    </div>
+    
+    
+    <!-- CARD 2 -->
+    
+    <div class="stackFeatureProCard">
+    
+    <p>
+    Share your screen instantly during meetings to present documents,
+    slides, or applications while collaborating with your team in real time.
+    </p>
+    
+    <div class="stackFeatureProIcon">🖥</div>
+    
+    <h3>Screen Sharing</h3>
+    
+    </div>
+    
+    
+    <!-- CARD 3 HIGHLIGHT -->
+    
+    <div class="stackFeatureProCard stackFeatureProHighlight">
+    
+    <p>
+    Stay connected with built-in team chat and instant messaging during meetings.
+    Share quick updates, files, and links without leaving the call.
+    </p>
+    
+    <div class="stackFeatureProIcon">💬</div>
+    
+    <h3>Team Chat</h3>
+    
+    </div>
+    
+    
+    <!-- CARD 4 -->
+    
+    <div class="stackFeatureProCard">
+    
+    <p>
+    Record meetings and store them securely in the cloud. Replay discussions,
+    training sessions, and presentations anytime.
+    </p>
+    
+    <div class="stackFeatureProIcon">🎙</div>
+    
+    <h3>Meeting Recording</h3>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackFeatureProSection{
+    
+    padding:120px 20px;
+    color:white;
+    font-family:Poppins,sans-serif;
+    overflow:hidden;
+    
+    /* ANIMATED GRADIENT BACKGROUND */
+    
+    background:linear-gradient(
+    270deg,
+    #050d3b,
+    #e18844,
+    #021b3a,
+    #3b063a
+    );
+    
+    background-size:600% 600%;
+    
+    animation:stackGradientMove 15s ease infinite;
+    
+    }
+    
+    @keyframes stackGradientMove{
+    
+    0%{background-position:0% 50%}
+    
+    50%{background-position:100% 50%}
+    
+    100%{background-position:0% 50%}
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackFeatureProContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    
+    }
+    
+    /* HEADER */
+    
+    .stackFeatureProHeader{
+    
+    text-align:center;
+    margin-bottom:70px;
+    
+    }
+    
+    .stackFeatureProTag{
+    
+    color:#ff4d4d;
+    font-weight:600;
+    letter-spacing:1px;
+    font-size:14px;
+    
+    }
+    
+    .stackFeatureProHeader h2{
+    
+    font-size:48px;
+    margin-top:15px;
+    line-height:1.3;
+    
+    }
+    
+    /* GRID */
+    
+    .stackFeatureProGrid{
+    
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    
+    }
+    
+    /* CARD */
+    
+    .stackFeatureProCard{
+    
+    padding:35px;
+    position:relative;
+    transition:.4s;
+    
+    /* LINE DIVIDER */
+    
+    border-left:1px solid rgba(255,255,255,0.15);
+    
+    }
+    
+    /* DIVIDER ANIMATION */
+    
+    .stackFeatureProCard::before{
+    
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:2px;
+    height:0%;
+    background:#ff4d4d;
+    transition:.6s;
+    
+    }
+    
+    .stackFeatureProCard:hover::before{
+    
+    height:100%;
+    
+    }
+    
+    /* TEXT */
+    
+    .stackFeatureProCard p{
+    
+    font-size:15px;
+    opacity:.85;
+    line-height:1.6;
+    margin-bottom:35px;
+    
+    }
+    
+    /* ICON */
+    
+    .stackFeatureProIcon{
+    
+    font-size:36px;
+    margin-bottom:18px;
+    
+    }
+    
+    /* TITLE */
+    
+    .stackFeatureProCard h3{
+    
+    font-size:20px;
+    
+    }
+    
+    /* HOVER GLOW BORDER */
+    
+    .stackFeatureProCard:hover{
+    
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,80,80,0.6);
+    
+    }
+    
+    /* HIGHLIGHT CARD */
+    
+    .stackFeatureProHighlight{
+    
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    border-radius:22px;
+    border:none;
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+    
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackFeatureProGrid{
+    
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    
+    }
+    
+    .stackFeatureProCard{
+    
+    border-left:none;
+    border-top:1px solid rgba(255,255,255,0.15);
+    
+    }
+    
+    .stackFeatureProHeader h2{
+    
+    font-size:36px;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackFeatureProSection{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackFeatureProGrid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackFeatureProHeader h2{
+    
+    font-size:28px;
+    
+    }
+    
+    }
+    
+    </style>
+    <!-- ------- -->
+
+    <!-- STACKLY STRIPE STYLE STEPS -->
+
+<section id="stackStripeSection">
+
+    <div class="stackStripeContainer">
+    
+    <!-- HEADER -->
+    
+    <div class="stackStripeHeader">
+    
+    <h2>Simple Steps to Start Your Online Meeting</h2>
+    
+    <p>
+    Our platform makes online meetings easy and efficient. Create a meeting,
+    invite participants, and collaborate instantly from anywhere.
+    </p>
+    
+    </div>
+    
+    
+    <div class="stackStripeSteps">
+    
+    <!-- STEP 1 -->
+    
+    <div class="stackStripeCard reveal">
+    
+    <div class="stackStripeIcon">⚙️</div>
+    
+    <h3>Create or <br> Schedule Meeting</h3>
+    
+    </div>
+    
+    
+    <!-- CONNECTOR -->
+    
+    <div class="stackStripeConnector">
+    
+    <div class="stackStripeDots"></div>
+    
+    <span>Set Date & Invite Participants</span>
+    
+    </div>
+    
+    
+    <!-- STEP 2 CENTER -->
+    
+    <div class="stackStripeCenter reveal">
+    
+    <div class="stackStripeCircleTop">
+    
+    <h3>Join the <br> Meeting</h3>
+    
+    </div>
+    
+    <div class="stackStripeCircleBottom">
+    
+    <p>
+    Participants join the meeting using a secure link from any device.
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- CONNECTOR -->
+    
+    <div class="stackStripeConnector">
+    
+    <div class="stackStripeDots"></div>
+    
+    <span>Start Collaboration</span>
+    
+    </div>
+    
+    
+    <!-- STEP 3 -->
+    
+    <div class="stackStripeCard reveal">
+    
+    <div class="stackStripeIcon">🤝</div>
+    
+    <h3>Collaborate <br> & Share</h3>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackStripeSection{
+    
+    padding:120px 20px;
+    background:linear-gradient(135deg,#f8f9ff,#eef1ff);
+    font-family:Poppins,sans-serif;
+    overflow:hidden;
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackStripeContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    
+    }
+    
+    /* HEADER */
+    
+    .stackStripeHeader{
+    
+    text-align:center;
+    margin-bottom:80px;
+    
+    }
+    
+    .stackStripeHeader h2{
+    
+    font-size:44px;
+    color:#0b1b3b;
+    
+    }
+    
+    .stackStripeHeader p{
+    
+    color:#6b7280;
+    max-width:650px;
+    margin:10px auto;
+    
+    }
+    
+    /* STEPS LAYOUT */
+    
+    .stackStripeSteps{
+    
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+    
+    }
+    
+    /* GLASS CARD */
+    
+    .stackStripeCard{
+    
+    width:260px;
+    padding:40px 25px;
+    
+    background:rgba(255,255,255,0.45);
+    backdrop-filter:blur(12px);
+    
+    border-radius:24px;
+    
+    border:1px solid rgba(255,255,255,0.5);
+    
+    text-align:center;
+    
+    transition:0.4s;
+    
+    }
+    
+    /* HOVER */
+    
+    .stackStripeCard:hover{
+    
+    transform:translateY(-10px) scale(1.05);
+    
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    
+    background:rgba(255,255,255,0.65);
+    
+    }
+    
+    /* ICON */
+    
+    .stackStripeIcon{
+    
+    font-size:36px;
+    margin-bottom:15px;
+    
+    }
+    
+    /* CENTER STEP */
+    
+    .stackStripeCenter{
+    
+    position:relative;
+    width:300px;
+    height:360px;
+    
+    border:2px dashed #8a8cff;
+    border-radius:20px;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    }
+    
+    /* TOP CIRCLE */
+    
+    .stackStripeCircleTop{
+    
+    position:absolute;
+    top:-60px;
+    
+    width:220px;
+    height:220px;
+    
+    background:linear-gradient(135deg,#ffc6c6,#ff5b6e);
+    
+    border-radius:50%;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    text-align:center;
+    padding:20px;
+    
+    animation:floatCircle 6s ease-in-out infinite;
+    
+    }
+    
+    /* BOTTOM CIRCLE */
+    
+    .stackStripeCircleBottom{
+    
+    position:absolute;
+    bottom:-70px;
+    
+    width:220px;
+    height:220px;
+    
+    background:linear-gradient(135deg,#6a5cff,#ff5b6e);
+    
+    border-radius:50%;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    text-align:center;
+    padding:30px;
+    color:white;
+    
+    animation:floatCircle 6s ease-in-out infinite reverse;
+    
+    }
+    
+    /* FLOAT ANIMATION */
+    
+    @keyframes floatCircle{
+    
+    0%{transform:translateY(0)}
+    
+    50%{transform:translateY(-12px)}
+    
+    100%{transform:translateY(0)}
+    
+    }
+    
+    
+    /* CONNECTOR */
+    
+    .stackStripeConnector{
+    
+    width:180px;
+    text-align:center;
+    color:#6b7280;
+    font-size:14px;
+    
+    }
+    
+    /* DOTTED LINE */
+    
+    .stackStripeDots{
+    
+    height:4px;
+    width:100%;
+    background:repeating-linear-gradient(
+    90deg,
+    orange 0px,
+    #7c8cff 8px,
+    transparent 8px,
+    transparent 16px
+    );
+    
+    position:relative;
+    margin-bottom:10px;
+    
+    overflow:hidden;
+    
+    }
+    
+    /* MOVING DOT */
+    
+    .stackStripeDots::after{
+    
+    content:"";
+    
+    width:10px;
+    height:10px;
+    
+    background: orange;
+    
+    border-radius:50%;
+    
+    position:absolute;
+    top:-3px;
+    
+    animation:moveDot 2s linear infinite;
+    
+    }
+    
+    @keyframes moveDot{
+    
+    0%{left:-10px}
+    
+    100%{left:100%}
+    
+    }
+    
+    /* SCROLL REVEAL */
+    
+    .reveal{
+    
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+    
+    }
+    
+    .reveal.active{
+    
+    opacity:1;
+    transform:translateY(0);
+    
+    }
+    
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackStripeSteps{
+    
+    flex-direction:column;
+    gap:70px;
+    
+    }
+    
+    .stackStripeConnector{
+    
+    transform:rotate(90deg);
+    width:120px;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackStripeSection{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackStripeHeader h2{
+    
+    font-size:28px;
+    
+    }
+    
+    .stackStripeCard{
+    
+    width:100%;
+    
+    }
+    
+    .stackStripeCenter{
+    
+    width:100%;
+    height:300px;
+    
+    }
+    
+    .stackStripeCircleTop,
+    .stackStripeCircleBottom{
+    
+    width:180px;
+    height:180px;
+    
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    /* SCROLL REVEAL */
+    
+    function reveal(){
+    
+    let reveals=document.querySelectorAll(".reveal")
+    
+    for(let i=0;i<reveals.length;i++){
+    
+    let windowHeight=window.innerHeight
+    let elementTop=reveals[i].getBoundingClientRect().top
+    let elementVisible=120
+    
+    if(elementTop<windowHeight-elementVisible){
+    
+    reveals[i].classList.add("active")
+    
+    }
+    
+    }
+    
+    }
+    
+    window.addEventListener("scroll",reveal)
+    
+    </script>
+    <!-- --------- -->
+
+    <!-- STACKLY PREMIUM ABOUT SECTION -->
+
+<section id="stackGlowAbout">
+
+    <div class="stackGlowContainer">
+    
+    <!-- LEFT IMAGE -->
+    
+    <div class="stackGlowImage">
+    
+    <img src="./meet2.webp" alt="Meeting">
+    
+    <div class="stackGlowRating">
+    
+    <h2>98%</h2>
+    <p>Highly rated by global meeting users!</p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT CONTENT -->
+    
+    <div class="stackGlowContent">
+    
+    <span class="stackGlowTag">● WHY CHOOSE OUR MEETING PLATFORM</span>
+    
+    <h2>
+    Connect, Collaborate and <br>
+    Communicate Anywhere
+    </h2>
+    
+    <p class="stackGlowText">
+    Our online meeting platform helps teams stay connected with seamless
+    video conferencing, real-time collaboration tools, and secure virtual
+    meeting rooms. Whether you are working remotely or managing global
+    teams, our solution ensures smooth communication and productive meetings.
+    </p>
+    
+    
+    <div class="stackGlowGrid">
+    
+    <!-- YEARS -->
+    
+    <div class="stackGlowYears">
+    
+    <h1>10+</h1>
+    <p>Years Of Digital Collaboration</p>
+    
+    </div>
+    
+    
+    <!-- FEATURES -->
+    
+    <div class="stackGlowFeatures">
+    
+    <div class="stackGlowFeature">
+    
+    <div class="stackGlowIcon">📹</div>
+    
+    <div>
+    <h4>HD Video & Screen Sharing</h4>
+    <p>Enjoy high-quality video calls with instant screen sharing.</p>
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackGlowFeature">
+    
+    <div class="stackGlowIcon">🔒</div>
+    
+    <div>
+    <h4>Secure & Reliable Meetings</h4>
+    <p>Host encrypted meetings with reliable performance.</p>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackGlowBottom">
+    
+    Start your meeting in seconds and collaborate with your team from anywhere in the world.
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- PARTICLES -->
+    
+    <div class="stackParticles"></div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackGlowAbout{
+    
+    padding:120px 20px;
+    background:linear-gradient(135deg,#be6b18,#0b1c46);
+    color:white;
+    font-family:Poppins,sans-serif;
+    position:relative;
+    overflow:hidden;
+    
+    }
+    
+    /* PARTICLES */
+    
+    .stackParticles::before,
+    .stackParticles::after{
+    
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    
+    background:radial-gradient(circle,rgba(255,255,255,0.12),transparent);
+    
+    animation:particleMove 18s linear infinite;
+    
+    }
+    
+    .stackParticles::after{
+    
+    left:70%;
+    top:40%;
+    animation-duration:25s;
+    
+    }
+    
+    @keyframes particleMove{
+    
+    0%{transform:translateY(0)}
+    
+    50%{transform:translateY(-60px)}
+    
+    100%{transform:translateY(0)}
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackGlowContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    
+    }
+    
+    /* IMAGE */
+    
+    .stackGlowImage{
+    
+    position:relative;
+    
+    }
+    
+    .stackGlowImage img{
+    
+    width:100%;
+    border-radius:20px;
+    transition:0.6s;
+    
+    }
+    
+    .stackGlowImage img:hover{
+    
+    transform:scale(1.05);
+    
+    }
+    
+    /* GLASSMORPHISM RATING */
+    
+    .stackGlowRating{
+    
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    
+    padding:22px 26px;
+    
+    border-radius:18px;
+    
+    border:1px solid rgba(255,255,255,0.2);
+    
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    
+    }
+    
+    .stackGlowRating h2{
+    
+    font-size:40px;
+    margin-bottom:4px;
+    
+    }
+    
+    /* CONTENT */
+    
+    .stackGlowTag{
+    
+    color:#ff4c6b;
+    font-weight:600;
+    font-size:14px;
+    
+    }
+    
+    .stackGlowContent h2{
+    
+    font-size:42px;
+    margin:15px 0;
+    
+    }
+    
+    .stackGlowText{
+    
+    color:#cfd6ff;
+    line-height:1.7;
+    
+    }
+    
+    /* GRID */
+    
+    .stackGlowGrid{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:40px;
+    
+    }
+    
+    /* YEARS */
+    
+    .stackGlowYears{
+    
+    border-right:1px solid rgba(255,255,255,0.2);
+    padding-right:20px;
+    
+    }
+    
+    .stackGlowYears h1{
+    
+    font-size:70px;
+    
+    background:linear-gradient(90deg,#ff5b6e,#6d6cff);
+    
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    
+    }
+    
+    .stackGlowYears p{
+    
+    font-size:18px;
+    
+    }
+    
+    /* FEATURES */
+    
+    .stackGlowFeature{
+    
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    
+    }
+    
+    .stackGlowIcon{
+    
+    font-size:26px;
+    
+    }
+    
+    .stackGlowFeature p{
+    
+    font-size:14px;
+    color:#cfd6ff;
+    
+    }
+    
+    /* BOTTOM TEXT */
+    
+    .stackGlowBottom{
+    
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    color:#cfd6ff;
+    
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackGlowContainer{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackGlowContent h2{
+    
+    font-size:32px;
+    
+    }
+    
+    .stackGlowGrid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackGlowYears{
+    
+    border:none;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackGlowAbout{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackGlowRating{
+    
+    bottom:10px;
+    left:10px;
+    
+    }
+    
+    .stackGlowRating h2{
+    
+    font-size:28px;
+    
+    }
+    
+    }
+    
+    </style>
+    <!-- ------------ -->
+    <!-- STACKLY SUBSCRIBE SECTION -->
+
+<section id="stackSubscribe">
+
+    <div class="stackSubscribeContainer">
+    
+    <!-- LEFT CONTENT -->
+    
+    <div class="stackSubscribeContent">
+    
+    <h2>Sign up for news, tips and more</h2>
+    
+    <form id="subscribeForm">
+    
+    <div class="stackSubscribeForm">
+    
+    <input 
+    type="email" 
+    id="emailInput"
+    placeholder="Enter your email address*"
+    />
+    
+    <button type="submit">Subscribe Now</button>
+    
+    </div>
+    
+    <div class="stackSubscribeCheck">
+    
+    <!-- <input type="checkbox" id="robotCheck"> -->
+    
+    <!-- <label for="robotCheck">I am human</label> -->
+    
+    </div>
+    
+    <p id="formError"></p>
+    
+    </form>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGE -->
+    
+    <div class="stackSubscribeImage">
+    
+    <img src="meet7.webp">
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackSubscribe{
+    
+    padding:120px 20px;
+    background:linear-gradient(135deg,#0c0c0c,#1a1a1a);
+    color:white;
+    font-family:Poppins,sans-serif;
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackSubscribeContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    
+    }
+    
+    /* CONTENT */
+    
+    .stackSubscribeContent h2{
+    
+    font-size:42px;
+    margin-bottom:30px;
+    
+    }
+    
+    /* FORM */
+    
+    .stackSubscribeForm{
+    
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    
+    }
+    
+    .stackSubscribeForm input{
+    
+    flex:1;
+    padding:16px;
+    border-radius:6px;
+    border:none;
+    font-size:16px;
+    
+    }
+    
+    .stackSubscribeForm button{
+    
+    background:#ff4c3b;
+    border:none;
+    color:white;
+    padding:16px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    
+    }
+    
+    .stackSubscribeForm button:hover{
+    
+    background:#ff2d1a;
+    
+    }
+    
+    /* CHECKBOX */
+    
+    .stackSubscribeCheck{
+    
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    
+    }
+    
+    .stackSubscribeCheck input{
+    
+    width:18px;
+    height:18px;
+    
+    }
+    
+    /* ERROR */
+    
+    #formError{
+    
+    color:#ff4c4c;
+    font-size:14px;
+    
+    }
+    
+    /* IMAGE */
+    
+    .stackSubscribeImage img{
+    
+    width:100%;
+    border-radius:10px;
+    object-fit:cover;
+    
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackSubscribeContainer{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackSubscribeImage{
+    
+    order:-1;
+    
+    }
+    
+    .stackSubscribeContent h2{
+    
+    font-size:32px;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackSubscribe{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackSubscribeForm{
+    
+    flex-direction:column;
+    
+    }
+    
+    .stackSubscribeForm button{
+    
+    width:100%;
+    
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    /* FORM VALIDATION */
+    
+    document.getElementById("subscribeForm").addEventListener("submit",function(e){
+    
+    e.preventDefault()
+    
+    let email=document.getElementById("emailInput").value
+    let robot=document.getElementById("robotCheck").checked
+    let error=document.getElementById("formError")
+    
+    if(email=="" && !robot){
+    
+    error.innerText="Please fill email and confirm you are human."
+    
+    return
+    
+    }
+    
+    if(email==""){
+    
+    error.innerText="Please enter your email address."
+    
+    return
+    
+    }
+    
+    if(!robot){
+    
+    error.innerText="Please confirm you are human."
+    
+    return
+    
+    }
+    
+    /* SUCCESS → GO TO 404 PAGE */
+    
+    window.location.href="404.html"
+    
+    })
+    
+    </script>

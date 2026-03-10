@@ -1,0 +1,303 @@
+<!-- STACKLY PRICING SECTION -->
+
+<section id="stackPricing">
+
+    <div class="stackPricingContainer">
+    
+    <h2 class="stackPricingTitle">Choose Your Plan</h2>
+    <p class="stackPricingSub">
+    Simple pricing for individuals, teams and businesses.
+    </p>
+    
+    
+    <div class="stackPricingGrid">
+    
+    <!-- PLAN 1 -->
+    
+    <div class="stackPricingCard">
+    
+    <h3>Basic</h3>
+    
+    <div class="stackPricingPrice">
+    <span>$9</span>/month
+    </div>
+    
+    <ul>
+    
+    <li>✔ 1 Device Access</li>
+    <li>✔ Remote Support</li>
+    <li>✔ File Transfer</li>
+    <li>✔ Standard Security</li>
+    
+    </ul>
+    
+    <button onclick="go404()">Buy Now</button>
+    
+    </div>
+    
+    
+    
+    <!-- PLAN 2 (POPULAR) -->
+    
+    <div class="stackPricingCard popular">
+    
+    <div class="stackPricingBadge">Most Popular</div>
+    
+    <h3>Professional</h3>
+    
+    <div class="stackPricingPrice">
+    <span>$19</span>/month
+    </div>
+    
+    <ul>
+    
+    <li>✔ Up to 5 Devices</li>
+    <li>✔ HD Remote Access</li>
+    <li>✔ Screen Sharing</li>
+    <li>✔ Multi Session</li>
+    <li>✔ Priority Support</li>
+    
+    </ul>
+    
+    <button onclick="go404()">Buy Now</button>
+    
+    </div>
+    
+    
+    
+    <!-- PLAN 3 -->
+    
+    <div class="stackPricingCard">
+    
+    <h3>Business</h3>
+    
+    <div class="stackPricingPrice">
+    <span>$39</span>/month
+    </div>
+    
+    <ul>
+    
+    <li>✔ Unlimited Devices</li>
+    <li>✔ Team Collaboration</li>
+    <li>✔ Advanced Security</li>
+    <li>✔ Session Recording</li>
+    <li>✔ Premium Support</li>
+    
+    </ul>
+    
+    <button onclick="go404()">Buy Now</button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackPricing{
+    
+    padding:120px 20px;
+    background:#f6f7fb;
+    font-family:Poppins,sans-serif;
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackPricingContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    
+    }
+    
+    /* TITLE */
+    
+    .stackPricingTitle{
+    
+    font-size:42px;
+    margin-bottom:10px;
+    
+    }
+    
+    .stackPricingSub{
+    
+    color:#6b7280;
+    margin-bottom:60px;
+    
+    }
+    
+    /* GRID */
+    
+    .stackPricingGrid{
+    
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    
+    }
+    
+    /* CARD */
+    
+    .stackPricingCard{
+    
+    background:white;
+    padding:40px 30px;
+    
+    border-radius:16px;
+    
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    
+    transition:0.4s;
+    
+    position:relative;
+    
+    }
+    
+    /* HOVER */
+    
+    .stackPricingCard:hover{
+    
+    transform:translateY(-10px);
+    
+    }
+    
+    /* POPULAR CARD */
+    
+    .stackPricingCard.popular{
+    
+    border:2px solid #ff4c3b;
+    transform:scale(1.05);
+    
+    }
+    
+    /* BADGE */
+    
+    .stackPricingBadge{
+    
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    
+    background:#ff4c3b;
+    color:white;
+    
+    padding:5px 12px;
+    font-size:12px;
+    
+    border-radius:20px;
+    
+    }
+    
+    /* PRICE */
+    
+    .stackPricingPrice{
+    
+    font-size:18px;
+    margin:20px 0;
+    
+    }
+    
+    .stackPricingPrice span{
+    
+    font-size:48px;
+    font-weight:700;
+    
+    }
+    
+    /* FEATURES */
+    
+    .stackPricingCard ul{
+    
+    list-style:none;
+    padding:0;
+    margin:25px 0;
+    
+    }
+    
+    .stackPricingCard li{
+    
+    margin:10px 0;
+    color:#374151;
+    
+    }
+    
+    /* BUTTON */
+    
+    .stackPricingCard button{
+    
+    background:#ff4c3b;
+    color:white;
+    
+    border:none;
+    padding:14px 28px;
+    
+    border-radius:6px;
+    
+    cursor:pointer;
+    font-weight:600;
+    
+    }
+    
+    .stackPricingCard button:hover{
+    
+    background:#ff2d1a;
+    
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackPricingGrid{
+    
+    grid-template-columns:1fr 1fr;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackPricing{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackPricingGrid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackPricingCard.popular{
+    
+    transform:none;
+    
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    function go404(){
+    
+    window.location.href="404.html"
+    
+    }
+    
+    </script>

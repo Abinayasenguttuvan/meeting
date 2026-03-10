@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<title>Stackly Teams </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+
+</head>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+<body>
+    
+
+<header class="header" id="header">
+
+<div class="nav-container">
+
+<!-- STACKLY LOGO -->
+
+<div class="logo">
+    <a href="./index.html">
+<img src="./logo.webp" alt="Stackly Logo"></a>
+</div>
+
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+<ul class="nav-menu" id="navMenu">
+
+<li class="dropdown">
+
+<a href="./index.html" class="active">Home ▾</a>
+
+<div class="dropdown-menu">
+<a href="./index.html">Home 1</a>
+<a href="./home2.html">Home 2</a>
+</div>
+
+</li>
+
+<li><a href="./about.html">About</a></li>
+<li><a href="./pricing.html">Pricing</a></li>
+<li><a href="./features.html">features</a></li>
+<li><a href="./contact.html">Contact</a></li>
+<li><a href="./dashboard.html">Dashboard</a></li>
+<li class="nav-buttons">
+
+<span class="dark-toggle" id="darkToggle">🌙</span>
+
+<a href="login.html" class="login-btn">Login</a>
+<a href="signup.html" class="signup-btn">Sign Up</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+<section class="ab-hero-wave-section">
+
+    <div class="ab-hero-overlay"></div>
+    
+    <div class="ab-hero-container">
+    
+    <h1 class="ab-hero-title">About Us</h1>
+    
+    <div class="ab-hero-breadcrumb">
+    
+    <a href="index.html">Home</a>
+    <span>→</span>
+    <span>About us </span>
+    
+    </div>
+    
+    </div>
+    
+    <!-- WAVE SHAPE -->
+    
+    <div class="ab-hero-wave">
+    
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+    
+    <path 
+    d="M0,100 C300,180 900,20 1440,120 L1440,200 L0,200 Z"
+    fill="#ffffff">
+    </path>
+    
+    </svg>
+    
+    </div>
+    
+    </section>
+
+    <Style>
+        /* HERO SECTION */
+
+.ab-hero-wave-section{
+
+position:relative;
+height:420px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background-image:url("./meet.webp");
+background-size:cover;
+background-position:center;
+
+color:white;
+overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.ab-hero-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.65)
+);
+
+}
+
+/* CONTENT */
+
+.ab-hero-container{
+
+position:relative;
+z-index:2;
+
+}
+
+.ab-hero-title{
+
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+
+}
+
+/* BREADCRUMB */
+
+.ab-hero-breadcrumb{
+
+font-size:18px;
+
+}
+
+.ab-hero-breadcrumb a{
+
+color:#ffffff;
+text-decoration:none;
+font-weight:500;
+
+}
+
+.ab-hero-breadcrumb a:hover{
+
+color: rgb(46, 217, 46);
+
+}
+
+.ab-hero-breadcrumb span{
+
+margin:0 6px;
+
+}
+
+/* WAVE */
+
+.ab-hero-wave{
+
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+line-height:0;
+
+}
+
+.ab-hero-wave svg{
+
+width:100%;
+height:120px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.ab-hero-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.ab-hero-title{
+font-size:28px;
+}
+
+.ab-hero-wave-section{
+height:340px;
+}
+
+.ab-hero-breadcrumb{
+font-size:16px;
+}
+
+}
+    </Style>
+    <!-- ---------------------- -->
+
+    <section class="ab2-about-section">
+
+        <div class="ab2-container">
+        
+        <div class="ab2-grid">
+        
+        <!-- LEFT IMAGE -->
+        
+        <div class="ab2-image-box">
+        
+        <img 
+        src="./meet5.webp" 
+        alt="About Image"
+        class="ab2-about-img">
+        
+        </div>
+        
+        
+        <!-- RIGHT CONTENT -->
+        
+        <div class="ab2-content">
+        
+        <h2 class="ab2-title ab2-reveal">Who We Are</h2>
+        
+        <p class="ab2-text ab2-reveal">
+        We help businesses connect with customers through modern digital platforms,
+        collaboration tools, and powerful communication solutions.
+        </p>
+        
+        
+        <div class="ab2-feature-list">
+        
+        <div class="ab2-feature ab2-reveal">
+        
+        <div class="ab2-icon">
+        ✓
+        </div>
+        
+        <div>
+        <h4>Smart Collaboration</h4>
+        <p>Teams communicate and collaborate efficiently Lorem, ipsum dolor sit amet consectetur 
+            adipisicing elit. Dignissimos, excepturi..</p>
+        </div>
+        
+        </div>
+        
+        
+        <div class="ab2-feature ab2-reveal">
+        
+        <div class="ab2-icon">
+        ★
+        </div>
+        
+        <div>
+        <h4>Customer Focused</h4>
+        <p>We create solutions designed for customer success Lorem ipsum dolor
+             sit amet consectetur adipisicing elit. Asperiores, expedita?
+
+
+        </p>
+        </div>
+        
+        </div>
+        
+        
+        <div class="ab2-feature ab2-reveal">
+        
+        <div class="ab2-icon">
+        ⚡
+        </div>
+        
+        <div>
+        <h4>Fast & Secure</h4>
+        <p>High performance systems with strong security Lorem ipsum dolor sit amet consectetur,
+             adipisicing elit. Voluptatem, esse!</p>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </section>
+
+        <style>
+            /* SECTION */
+
+.ab2-about-section{
+
+padding:80px 5%;
+background: rgb(185, 222, 185);
+
+}
+
+/* CONTAINER */
+
+.ab2-container{
+
+max-width:1200px;
+margin:auto;
+
+}
+
+/* GRID */
+
+.ab2-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+/* IMAGE */
+
+.ab2-image-box{
+
+overflow:hidden;
+border-radius:16px;
+
+}
+
+.ab2-about-img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+filter:blur(5px);
+transform:scale(1.1);
+
+transition:all .5s ease;
+
+}
+
+/* HOVER EFFECT */
+
+.ab2-image-box:hover .ab2-about-img{
+
+filter:blur(0);
+transform:scale(1.2);
+
+}
+
+/* CONTENT */
+
+.ab2-title{
+
+font-size:36px;
+font-weight:700;
+margin-bottom:15px;
+
+}
+
+.ab2-text{
+
+color:#666;
+margin-bottom:30px;
+line-height:1.6;
+
+}
+
+/* FEATURES */
+
+.ab2-feature{
+
+display:flex;
+gap:15px;
+margin-bottom:20px;
+align-items:flex-start;
+
+}
+
+/* ICON */
+
+.ab2-icon{
+
+width:40px;
+height:40px;
+border-radius:50%;
+background: green;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+
+}
+
+/* ANIMATION START STATE */
+
+.ab2-reveal{
+
+opacity:0;
+transform:translateY(40px);
+transition:all .7s ease;
+
+}
+
+/* ACTIVE STATE */
+
+.ab2-reveal.ab2-visible{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.ab2-grid{
+
+grid-template-columns:1fr;
+gap:40px;
+
+}
+
+.ab2-title{
+
+font-size:28px;
+
+}
+
+}
+        </style>
+        <script>
+
+const ab2Observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+    
+    if(entry.isIntersecting){
+    
+    entry.target.classList.add("ab2-visible");
+    
+    }
+    
+    });
+    
+    },{threshold:0.2});
+    
+    document.querySelectorAll(".ab2-reveal").forEach(el => {
+    
+    ab2Observer.observe(el);
+    
+    });
+
+    </script>
+    <!-- ------------------------ -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:rgb(215, 229, 215);
+}
+
+/* MAIN SECTION */
+
+.pf-network-section{
+padding:80px 5%;
+text-align:center;
+}
+
+.pf-network-title{
+font-size:38px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.pf-network-subtitle{
+color:#666;
+margin-bottom:60px;
+}
+
+/* GRID */
+
+.pf-network-grid{
+
+display:grid;
+grid-template-columns:1fr 480px 1fr;
+align-items:center;
+gap:40px;
+
+}
+
+/* FEATURE CARD */
+
+.pf-feature-card{
+
+position:relative;
+border-radius:14px;
+overflow:hidden;
+margin-bottom:25px;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+/* CARD BACKGROUND IMAGE */
+
+.pf-feature-bg{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+transform:scale(1);
+transition:.35s;
+
+}
+
+/* COLOR OVERLAY */
+
+.pf-feature-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(10,30,90,.65);
+
+}
+
+/* CARD CONTENT */
+
+.pf-feature-content{
+
+position:relative;
+z-index:2;
+padding:25px;
+color:white;
+
+}
+
+.pf-feature-title{
+
+font-weight:600;
+margin-top:10px;
+font-size:18px;
+
+}
+
+.pf-feature-text{
+
+font-size:14px;
+opacity:.9;
+
+}
+
+.pf-feature-icon{
+
+width:65px;
+
+}
+
+/* HOVER EFFECT */
+
+.pf-feature-card:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+}
+
+.pf-feature-card:hover .pf-feature-bg{
+
+transform:scale(1.15);
+
+}
+
+/* CENTER NETWORK */
+
+.pf-network-center{
+
+position:relative;
+width:450px;
+height:450px;
+margin:auto;
+
+}
+
+#pfNetworkCanvas{
+
+width:100%;
+height:100%;
+
+}
+
+/* CENTRAL HUB */
+
+.pf-network-hub{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:120px;
+height:120px;
+border-radius:50%;
+background: rgb(4, 49, 4);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:18px;
+box-shadow:0 0 30px rgb(4, 49, 4);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.pf-network-grid{
+grid-template-columns:1fr;
+}
+
+.pf-network-center{
+width:320px;
+height:320px;
+}
+
+}
+
+@media(max-width:600px){
+
+.pf-network-title{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<section class="pf-network-section">
+
+<h2 class="pf-network-title" data-aos="fade-up">
+One Platform. Infinite Connections
+</h2>
+
+<p class="pf-network-subtitle" data-aos="fade-up">
+Connect teams, customers and partners from one unified platform.
+</p>
+
+
+<div class="pf-network-grid">
+
+<!-- LEFT FEATURES -->
+
+<div>
+
+<div class="pf-feature-card" data-aos="fade-right">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet1.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets1.lottiefiles.com/packages/lf20_4kx2q32n.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Collaboration</div>
+<div class="pf-feature-text">Work together with teams in real-time.</div>
+
+</div>
+
+</div>
+
+
+
+<div class="pf-feature-card" data-aos="fade-right" data-aos-delay="200">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet2.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets9.lottiefiles.com/packages/lf20_gjmecwii.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Customer Support</div>
+<div class="pf-feature-text">Provide instant support worldwide.</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CENTER NETWORK -->
+
+<div class="pf-network-center" data-aos="zoom-in">
+
+<canvas id="pfNetworkCanvas"></canvas>
+
+<div class="pf-network-hub">
+Platform
+</div>
+
+</div>
+
+
+<!-- RIGHT FEATURES -->
+
+<div>
+
+<div class="pf-feature-card" data-aos="fade-left">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet3.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets2.lottiefiles.com/packages/lf20_khzniaya.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Marketing</div>
+<div class="pf-feature-text">Engage customers with campaigns.</div>
+
+</div>
+
+</div>
+
+
+<div class="pf-feature-card" data-aos="fade-left" data-aos-delay="200">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets5.lottiefiles.com/packages/lf20_5ngs2ksb.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Sales</div>
+<div class="pf-feature-text">Convert leads into loyal customers.</div>
+
+</div>
+
+</div>
+
+
+<div class="pf-feature-card" data-aos="fade-left" data-aos-delay="300">
+
+<div class="pf-feature-bg"
+style="background-image:url('meet5.webp');">
+</div>
+
+<div class="pf-feature-overlay"></div>
+
+<div class="pf-feature-content">
+
+<lottie-player
+src="https://assets7.lottiefiles.com/packages/lf20_3rwasyjy.json"
+background="transparent"
+speed="1"
+class="pf-feature-icon"
+loop autoplay>
+</lottie-player>
+
+<div class="pf-feature-title">Employee Engagement</div>
+<div class="pf-feature-text">Connect internal teams globally.</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+AOS.init({
+duration:1000,
+once:true
+});
+
+
+/* NETWORK ANIMATION */
+
+const pfCanvas=document.getElementById("pfNetworkCanvas");
+const pfCtx=pfCanvas.getContext("2d");
+
+pfCanvas.width=450;
+pfCanvas.height=450;
+
+let pfNodes=[];
+
+for(let i=0;i<28;i++){
+
+pfNodes.push({
+
+x:Math.random()*pfCanvas.width,
+y:Math.random()*pfCanvas.height,
+vx:(Math.random()-.5)*0.6,
+vy:(Math.random()-.5)*0.6
+
+});
+
+}
+
+function pfAnimateNetwork(){
+
+pfCtx.clearRect(0,0,pfCanvas.width,pfCanvas.height);
+
+for(let i=0;i<pfNodes.length;i++){
+
+let node=pfNodes[i];
+
+node.x+=node.vx;
+node.y+=node.vy;
+
+if(node.x<0||node.x>pfCanvas.width) node.vx*=-1;
+if(node.y<0||node.y>pfCanvas.height) node.vy*=-1;
+
+pfCtx.beginPath();
+pfCtx.arc(node.x,node.y,2,0,Math.PI*2);
+pfCtx.fillStyle="#4f6df5";
+pfCtx.fill();
+
+for(let j=i+1;j<pfNodes.length;j++){
+
+let node2=pfNodes[j];
+
+let dist=Math.hypot(node.x-node2.x,node.y-node2.y);
+
+if(dist<120){
+
+pfCtx.beginPath();
+pfCtx.moveTo(node.x,node.y);
+pfCtx.lineTo(node2.x,node2.y);
+pfCtx.strokeStyle="rgba(79,109,245,0.2)";
+pfCtx.stroke();
+
+}
+
+}
+
+}
+
+requestAnimationFrame(pfAnimateNetwork);
+
+}
+
+pfAnimateNetwork();
+
+</script>
+
+
+    
+<!-- ------------------------ -->
+
+<section id="stk-testimonials">
+
+    <div class="stk-test-container">
+    
+    <h2 class="stk-test-heading">
+    User Testimonials
+    </h2>
+    
+    <div class="stk-test-slider">
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Stackly Meet transformed how our remote teams collaborate.
+    The video quality and screen sharing are excellent.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Sarah Johnson</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card active">
+    
+    <img src="./meet1.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Stackly Meet helped our company scale meetings globally
+    while maintaining seamless communication.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>David Lee</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet2.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “From webinars to daily meetings,
+    Stackly Meet makes collaboration effortless.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Emily Clark</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="stk-test-card">
+    
+    <img src="./meet3.webp">
+    
+    <div class="stk-test-content">
+    
+    <p class="stk-test-quote">
+    “Secure meetings and smooth collaboration tools
+    make Stackly Meet our go-to communication platform.”
+    </p>
+    
+    <div class="stk-test-user">
+    <img src="./sana.webp">
+    <span>Michael Ross</span>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+    <style>
+        #stk-testimonials{
+padding:120px 20px;
+background:#f7f9fc;
+font-family:system-ui;
+overflow:hidden;
+}
+
+.stk-test-container{
+max-width:1200px;
+margin:auto;
+}
+
+.stk-test-heading{
+text-align:center;
+font-size:52px;
+font-weight:800;
+margin-bottom:60px;
+}
+
+/* slider */
+
+.stk-test-slider{
+display:flex;
+gap:20px;
+align-items:center;
+justify-content:center;
+}
+
+/* card */
+
+.stk-test-card{
+position:relative;
+flex:1;
+height:380px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+transition:all .5s ease;
+filter:brightness(.8);
+}
+
+.stk-test-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* center card */
+
+.stk-test-card.active{
+flex:2;
+filter:brightness(1);
+}
+
+/* hover expand */
+
+.stk-test-card:hover{
+flex:2.2;
+filter:brightness(1);
+}
+
+/* content overlay */
+
+.stk-test-content{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:30px;
+color:white;
+background:linear-gradient(transparent,rgba(0,0,0,.7));
+}
+
+/* quote */
+
+.stk-test-quote{
+font-size:18px;
+line-height:1.6;
+margin-bottom:20px;
+font-style:italic;
+}
+
+/* user */
+
+.stk-test-user{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.stk-test-user img{
+width:36px;
+height:36px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* tablet */
+
+@media(max-width:1024px){
+
+.stk-test-heading{
+font-size:42px;
+}
+
+.stk-test-card{
+height:340px;
+}
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.stk-test-slider{
+flex-direction:column;
+}
+
+.stk-test-card{
+width:100%;
+height:320px;
+flex:none;
+}
+
+.stk-test-card:hover{
+flex:none;
+}
+
+}
+
+/* small mobile */
+
+@media(max-width:480px){
+
+.stk-test-heading{
+font-size:30px;
+}
+
+.stk-test-quote{
+font-size:16px;
+}
+
+}
+        </style>
+
+<script>
+
+    const cards=document.querySelectorAll(".stk-test-card");
+    
+    cards.forEach(card=>{
+    card.addEventListener("mouseenter",()=>{
+    
+    cards.forEach(c=>c.classList.remove("active"));
+    card.classList.add("active");
+    
+    });
+    });
+    
+    </script>
+
+<section class="tmx-team-section">
+
+    <div class="tmx-container">
+    
+    <h2 class="tmx-title tmx-reveal">Our Team</h2>
+    
+    <p class="tmx-subtitle tmx-reveal">
+    120+ Dedicated Team Members
+    </p>
+    
+    <div class="tmx-team-grid">
+    
+    <!-- TEAM MEMBER -->
+    
+    <div class="tmx-team-card tmx-reveal">
+    
+    <div class="tmx-corner tl"></div>
+    <div class="tmx-corner tr"></div>
+    <div class="tmx-corner bl"></div>
+    <div class="tmx-corner br"></div>
+    
+    <img src="./sana.webp" class="tmx-team-img">
+    
+    <h4>John Carter</h4>
+    <span>CEO & Founder</span>
+    
+    </div>
+    
+    
+    <div class="tmx-team-card tmx-reveal">
+    
+    <div class="tmx-corner tl"></div>
+    <div class="tmx-corner tr"></div>
+    <div class="tmx-corner bl"></div>
+    <div class="tmx-corner br"></div>
+    
+    <img src="./meet5.webp" class="tmx-team-img">
+    
+    <h4>Sophia Lee</h4>
+    <span>Marketing Manager</span>
+    
+    </div>
+    
+    
+    <div class="tmx-team-card tmx-reveal">
+    
+    <div class="tmx-corner tl"></div>
+    <div class="tmx-corner tr"></div>
+    <div class="tmx-corner bl"></div>
+    <div class="tmx-corner br"></div>
+    
+    <img src="./meet7.webp" class="tmx-team-img">
+    
+    <h4>David Miller</h4>
+    <span>Lead Developer</span>
+    
+    </div>
+    
+    
+    <!-- JOIN TEAM CARD -->
+    
+    <div class="tmx-join-card tmx-reveal">
+    
+    <h3>Join Our Team</h3>
+    
+    <p>Become part of our growing global team.</p>
+    
+    <a href="404.html" class="tmx-join-btn">
+    JOIN TEAM
+    </a>
+    
+    </div>
+    
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+    <style>
+        /* SECTION */
+
+.tmx-team-section{
+
+padding:80px 5%;
+background:#f7f9ff;
+text-align:center;
+
+}
+
+/* CONTAINER */
+
+.tmx-container{
+
+max-width:1200px;
+margin:auto;
+
+}
+
+/* TITLE */
+
+.tmx-title{
+
+font-size:36px;
+font-weight:700;
+margin-bottom:10px;
+
+}
+
+.tmx-subtitle{
+
+color:#666;
+margin-bottom:50px;
+
+}
+
+/* GRID */
+
+.tmx-team-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+/* TEAM CARD */
+
+.tmx-team-card{
+
+position:relative;
+background:white;
+padding:30px 20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:.3s;
+
+}
+
+.tmx-team-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* IMAGE */
+
+.tmx-team-img{
+
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+
+}
+
+/* NAME */
+
+.tmx-team-card h4{
+
+margin:10px 0 5px;
+font-size:18px;
+
+}
+
+.tmx-team-card span{
+
+font-size:14px;
+color:#666;
+
+}
+
+/* CORNER SEMI CIRCLES */
+
+.tmx-corner{
+
+position:absolute;
+width:35px;
+height:35px;
+background:green;
+
+}
+
+.tmx-corner.tl{
+top:0;
+left:0;
+border-bottom-right-radius:35px;
+}
+
+.tmx-corner.tr{
+top:0;
+right:0;
+border-bottom-left-radius:35px;
+}
+
+.tmx-corner.bl{
+bottom:0;
+left:0;
+border-top-right-radius:35px;
+}
+
+.tmx-corner.br{
+bottom:0;
+right:0;
+border-top-left-radius:35px;
+}
+
+/* JOIN CARD */
+
+.tmx-join-card{
+
+background:green;
+color:white;
+padding:40px 20px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+}
+
+.tmx-join-card h3{
+
+margin-bottom:10px;
+
+}
+
+.tmx-join-btn{
+
+margin-top:15px;
+background:white;
+color:green;
+padding:10px 20px;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.tmx-join-btn:hover{
+
+background:#222;
+color:white;
+
+}
+
+/* SCROLL ANIMATION */
+
+.tmx-reveal{
+
+opacity:0;
+transform:translateY(40px);
+transition:.7s;
+
+}
+
+.tmx-visible{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.tmx-team-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.tmx-team-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.tmx-title{
+font-size:28px;
+}
+
+}
+    </style>
+    <script>
+    const tmxObserver = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+        
+        if(entry.isIntersecting){
+        
+        entry.target.classList.add("tmx-visible");
+        
+        }
+        
+        });
+        
+        },{threshold:0.2});
+        
+        document.querySelectorAll(".tmx-reveal").forEach(el=>{
+        
+        tmxObserver.observe(el);
+        
+        });
+
+    </script>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
