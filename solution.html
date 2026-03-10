@@ -1,3 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<title>Stackly Teams </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+
+</head>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+<body>
+    
+
+<header class="header" id="header">
+
+<div class="nav-container">
+
+<!-- STACKLY LOGO -->
+
+<div class="logo">
+    <a href="./home2.html">
+<img src="./logo.webp" alt="Stackly Logo"></a>
+</div>
+
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+<ul class="nav-menu" id="navMenu">
+
+<li class="dropdown">
+
+<a href="./home2.html" class="active">Home ▾</a>
+
+<div class="dropdown-menu">
+<a href="./index.html">Home 1</a>
+<a href="./home2.html">Home 2</a>
+</div>
+
+</li>
+
+<li><a href="./solution.html">Solution</a></li>
+<li><a href="./pricing1.html">Pricing</a></li>
+<li><a href="./contact1.html">Contact</a></li>
+<li class="nav-buttons">
+
+<!-- <span class="dark-toggle" id="darkToggle">🌙</span> -->
+
+<a href="login.html" class="login-btn">Login</a>
+<a href="signup.html" class="signup-btn">Sign Up</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+<section class="ab-hero-wave-section">
+
+    <div class="ab-hero-overlay"></div>
+    
+    <div class="ab-hero-container">
+    
+    <h1 class="ab-hero-title">Solutions</h1>
+    
+    <div class="ab-hero-breadcrumb">
+    
+    <a href="home2.html">Home</a>
+    <span>→</span>
+    <span>Solutions</span>
+    
+    </div>
+    
+    </div>
+    
+    <!-- WAVE SHAPE -->
+    
+    <div class="ab-hero-wave">
+    
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+    
+    <path 
+    d="M0,100 C300,180 900,20 1440,120 L1440,200 L0,200 Z"
+    fill="#ffffff">
+    </path>
+    
+    </svg>
+    
+    </div>
+    
+    </section>
+
+    <Style>
+        /* HERO SECTION */
+
+.ab-hero-wave-section{
+
+position:relative;
+height:420px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background-image:url("./meet1.webp");
+background-size:cover;
+background-position:center;
+
+color:white;
+overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.ab-hero-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.65)
+);
+
+}
+
+/* CONTENT */
+
+.ab-hero-container{
+
+position:relative;
+z-index:2;
+
+}
+
+.ab-hero-title{
+
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+
+}
+
+/* BREADCRUMB */
+
+.ab-hero-breadcrumb{
+
+font-size:18px;
+
+}
+
+.ab-hero-breadcrumb a{
+
+color:#ffffff;
+text-decoration:none;
+font-weight:500;
+
+}
+
+.ab-hero-breadcrumb a:hover{
+
+color: rgb(46, 217, 46);
+
+}
+
+.ab-hero-breadcrumb span{
+
+margin:0 6px;
+
+}
+
+/* WAVE */
+
+.ab-hero-wave{
+
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+line-height:0;
+
+}
+
+.ab-hero-wave svg{
+
+width:100%;
+height:120px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.ab-hero-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.ab-hero-title{
+font-size:28px;
+}
+
+.ab-hero-wave-section{
+height:340px;
+}
+
+.ab-hero-breadcrumb{
+font-size:16px;
+}
+
+}
+    </Style>
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -157,6 +397,656 @@ font-size:14px;
 
 }
   </Style>
+
+<!-- !-- STACKLY PREMIUM ABOUT SECTION --> -->
+
+<section id="stackGlowAbout">
+
+    <div class="stackGlowContainer">
+    
+    <!-- LEFT IMAGE -->
+    
+    <div class="stackGlowImage">
+    
+    <img src="./meet2.webp" alt="Meeting">
+    
+    <div class="stackGlowRating">
+    
+    <h2>98%</h2>
+    <p>Highly rated by global meeting users!</p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- RIGHT CONTENT -->
+    
+    <div class="stackGlowContent">
+    
+    <span class="stackGlowTag">● WHY CHOOSE OUR MEETING PLATFORM</span>
+    
+    <h2>
+    Connect, Collaborate and <br>
+    Communicate Anywhere
+    </h2>
+    
+    <p class="stackGlowText">
+    Our online meeting platform helps teams stay connected with seamless
+    video conferencing, real-time collaboration tools, and secure virtual
+    meeting rooms. Whether you are working remotely or managing global
+    teams, our solution ensures smooth communication and productive meetings.
+    </p>
+    
+    
+    <div class="stackGlowGrid">
+    
+    <!-- YEARS -->
+    
+    <div class="stackGlowYears">
+    
+    <h1>10+</h1>
+    <p>Years Of Digital Collaboration</p>
+    
+    </div>
+    
+    
+    <!-- FEATURES -->
+    
+    <div class="stackGlowFeatures">
+    
+    <div class="stackGlowFeature">
+    
+    <div class="stackGlowIcon">📹</div>
+    
+    <div>
+    <h4>HD Video & Screen Sharing</h4>
+    <p>Enjoy high-quality video calls with instant screen sharing.</p>
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackGlowFeature">
+    
+    <div class="stackGlowIcon">🔒</div>
+    
+    <div>
+    <h4>Secure & Reliable Meetings</h4>
+    <p>Host encrypted meetings with reliable performance.</p>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="stackGlowBottom">
+    
+    Start your meeting in seconds and collaborate with your team from anywhere in the world.
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- PARTICLES -->
+    
+    <div class="stackParticles"></div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #stackGlowAbout{
+    
+    padding:120px 20px;
+    background:linear-gradient(135deg,#be6b18,#0b1c46);
+    color:white;
+    font-family:Poppins,sans-serif;
+    position:relative;
+    overflow:hidden;
+    
+    }
+    
+    /* PARTICLES */
+    
+    .stackParticles::before,
+    .stackParticles::after{
+    
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    
+    background:radial-gradient(circle,rgba(255,255,255,0.12),transparent);
+    
+    animation:particleMove 18s linear infinite;
+    
+    }
+    
+    .stackParticles::after{
+    
+    left:70%;
+    top:40%;
+    animation-duration:25s;
+    
+    }
+    
+    @keyframes particleMove{
+    
+    0%{transform:translateY(0)}
+    
+    50%{transform:translateY(-60px)}
+    
+    100%{transform:translateY(0)}
+    
+    }
+    
+    /* CONTAINER */
+    
+    .stackGlowContainer{
+    
+    max-width:1200px;
+    margin:auto;
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    
+    }
+    
+    /* IMAGE */
+    
+    .stackGlowImage{
+    
+    position:relative;
+    
+    }
+    
+    .stackGlowImage img{
+    
+    width:100%;
+    border-radius:20px;
+    transition:0.6s;
+    
+    }
+    
+    .stackGlowImage img:hover{
+    
+    transform:scale(1.05);
+    
+    }
+    
+    /* GLASSMORPHISM RATING */
+    
+    .stackGlowRating{
+    
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    
+    padding:22px 26px;
+    
+    border-radius:18px;
+    
+    border:1px solid rgba(255,255,255,0.2);
+    
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    
+    }
+    
+    .stackGlowRating h2{
+    
+    font-size:40px;
+    margin-bottom:4px;
+    
+    }
+    
+    /* CONTENT */
+    
+    .stackGlowTag{
+    
+    color:#ff4c6b;
+    font-weight:600;
+    font-size:14px;
+    
+    }
+    
+    .stackGlowContent h2{
+    
+    font-size:42px;
+    margin:15px 0;
+    
+    }
+    
+    .stackGlowText{
+    
+    color:#cfd6ff;
+    line-height:1.7;
+    
+    }
+    
+    /* GRID */
+    
+    .stackGlowGrid{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:40px;
+    
+    }
+    
+    /* YEARS */
+    
+    .stackGlowYears{
+    
+    border-right:1px solid rgba(255,255,255,0.2);
+    padding-right:20px;
+    
+    }
+    
+    .stackGlowYears h1{
+    
+    font-size:70px;
+    
+    background:linear-gradient(90deg,#ff5b6e,#6d6cff);
+    
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    
+    }
+    
+    .stackGlowYears p{
+    
+    font-size:18px;
+    
+    }
+    
+    /* FEATURES */
+    
+    .stackGlowFeature{
+    
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    
+    }
+    
+    .stackGlowIcon{
+    
+    font-size:26px;
+    
+    }
+    
+    .stackGlowFeature p{
+    
+    font-size:14px;
+    color:#cfd6ff;
+    
+    }
+    
+    /* BOTTOM TEXT */
+    
+    .stackGlowBottom{
+    
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    color:#cfd6ff;
+    
+    }
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:992px){
+    
+    .stackGlowContainer{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackGlowContent h2{
+    
+    font-size:32px;
+    
+    }
+    
+    .stackGlowGrid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .stackGlowYears{
+    
+    border:none;
+    
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #stackGlowAbout{
+    
+    padding:80px 20px;
+    
+    }
+    
+    .stackGlowRating{
+    
+    bottom:10px;
+    left:10px;
+    
+    }
+    
+    .stackGlowRating h2{
+    
+    font-size:28px;
+    
+    }
+    
+    }
+    
+    </style>
+
+<section class="stkSubx-section">
+
+    <div class="stkSubx-overlay"></div>
+    
+    <div class="stkSubx-container">
+    
+    <!-- LEFT CONTENT -->
+    
+    <div class="stkSubx-content">
+    
+    <h2>Sign up for news, tips and more</h2>
+    
+    <form id="stkSubxForm">
+    
+    <div class="stkSubx-form">
+    
+    <input 
+    type="email"
+    id="stkSubxEmail"
+    placeholder="Enter your email address*" 
+    />
+    
+    <button type="submit">Subscribe Now</button>
+    
+    </div>
+    
+    <p id="stkSubxError"></p>
+    
+    </form>
+    
+    </div>
+    
+    
+    <!-- RIGHT IMAGE -->
+    
+    <div class="stkSubx-image">
+    
+    <img src="./meet7.webp" alt="meeting image">
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <style>
+        /* SECTION */
+
+.stkSubx-section{
+
+position:relative;
+
+padding:120px 20px;
+
+font-family:Poppins,sans-serif;
+
+background:url("./meet1.webp") center/cover no-repeat;
+
+overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.stkSubx-overlay{
+
+position:absolute;
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.65);
+
+z-index:1;
+
+}
+
+/* CONTAINER */
+
+.stkSubx-container{
+
+position:relative;
+z-index:2;
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+color:white;
+
+}
+
+
+/* CONTENT */
+
+.stkSubx-content h2{
+
+font-size:42px;
+margin-bottom:30px;
+
+}
+
+/* FORM */
+
+.stkSubx-form{
+
+display:flex;
+gap:15px;
+
+margin-bottom:10px;
+
+}
+
+/* INPUT */
+
+.stkSubx-form input{
+
+flex:1;
+
+padding:16px;
+
+border-radius:8px;
+
+border:none;
+
+font-size:16px;
+
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(6px);
+
+color:white;
+
+}
+
+/* BUTTON */
+
+.stkSubx-form button{
+
+background:#ff4c3b;
+
+border:none;
+
+color:white;
+
+padding:16px 25px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.stkSubx-form button:hover{
+
+background:#ff2d1a;
+transform:scale(1.05);
+
+}
+
+/* ERROR */
+
+#stkSubxError{
+
+color:#ff6b6b;
+font-size:14px;
+
+}
+
+
+/* IMAGE */
+
+.stkSubx-image img{
+
+width:100%;
+
+border-radius:14px;
+
+object-fit:cover;
+
+transition:0.6s;
+
+}
+
+/* HOVER */
+
+.stkSubx-image:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.stkSubx-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.stkSubx-image{
+
+order:-1;
+
+}
+
+.stkSubx-content h2{
+
+font-size:32px;
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.stkSubx-section{
+
+padding:80px 20px;
+
+}
+
+.stkSubx-form{
+
+flex-direction:column;
+
+}
+
+.stkSubx-form button{
+
+width:100%;
+
+}
+
+}
+    </style>
+
+<script>
+document.getElementById("stkSubxForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let email=document.getElementById("stkSubxEmail").value;
+
+let error=document.getElementById("stkSubxError");
+
+if(email==""){
+
+error.innerText="Please enter your email address.";
+return;
+
+}
+
+/* SUCCESS → GO TO 404 PAGE */
+
+window.location.href="404.html";
+
+});
+
+</script>
   <!-- <footer> -->
     <footer class="footer">
         <div class="footer-container">
@@ -181,11 +1071,10 @@ font-size:14px;
             <div class="footer-box">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./pricing.html">Pricing</a></li>
-                    <li><a href="./features.html">features</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./home2.html">Home</a></li>
+                        <li><a href="./solution.html">Solution</a></li>
+                        <li><a href="./pricing1.html">Pricing</a></li>
+                        <li><a href="./contact1.html">Contact</a></li>
 
                 </ul>
             </div>

@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style1.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <title>Stackly Teams </title>
@@ -18,6 +19,14 @@
 
 </head>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
 <body>
     
 
@@ -28,7 +37,7 @@
 <!-- STACKLY LOGO -->
 
 <div class="logo">
-    <a href="./index.html">
+    <a href="./home2.html">
 <img src="./logo.webp" alt="Stackly Logo"></a>
 </div>
 
@@ -38,7 +47,7 @@
 
 <li class="dropdown">
 
-<a href="./index.html" class="active">Home ▾</a>
+<a href="./home2.html" class="active">Home ▾</a>
 
 <div class="dropdown-menu">
 <a href="./index.html">Home 1</a>
@@ -47,14 +56,12 @@
 
 </li>
 
-<li><a href="./about.html">About</a></li>
-<li><a href="./pricing.html">Pricing</a></li>
-<li><a href="./features.html">features</a></li>
-<li><a href="./contact.html">Contact</a></li>
-<li><a href="./dashboard.html">Dashboard</a></li>
+<li><a href="./solution.html">Solution</a></li>
+<li><a href="./pricing1.html">Pricing</a></li>
+<li><a href="./contact1.html">Contact</a></li>
 <li class="nav-buttons">
 
-<span class="dark-toggle" id="darkToggle">🌙</span>
+<!-- <span class="dark-toggle" id="darkToggle">🌙</span> -->
 
 <a href="login.html" class="login-btn">Login</a>
 <a href="signup.html" class="signup-btn">Sign Up</a>
@@ -66,6 +73,7 @@
 </div>
 
 </header>
+
 
 <!-- SAAS HERO SECTION -->
 <section id="saasHeroSection">
@@ -2008,262 +2016,357 @@
     
     </style>
     <!-- ------------ -->
-    <!-- STACKLY SUBSCRIBE SECTION -->
+    <section class="stkSubx-section">
 
-<section id="stackSubscribe">
+        <div class="stkSubx-overlay"></div>
+        
+        <div class="stkSubx-container">
+        
+        <!-- LEFT CONTENT -->
+        
+        <div class="stkSubx-content">
+        
+        <h2>Sign up for news, tips and more</h2>
+        
+        <form id="stkSubxForm">
+        
+        <div class="stkSubx-form">
+        
+        <input 
+        type="email"
+        id="stkSubxEmail"
+        placeholder="Enter your email address*" 
+        />
+        
+        <button type="submit">Subscribe Now</button>
+        
+        </div>
+        
+        <p id="stkSubxError"></p>
+        
+        </form>
+        
+        </div>
+        
+        
+        <!-- RIGHT IMAGE -->
+        
+        <div class="stkSubx-image">
+        
+        <img src="./meet7.webp" alt="meeting image">
+        
+        </div>
+        
+        </div>
+        
+        </section>
 
-    <div class="stackSubscribeContainer">
-    
-    <!-- LEFT CONTENT -->
-    
-    <div class="stackSubscribeContent">
-    
-    <h2>Sign up for news, tips and more</h2>
-    
-    <form id="subscribeForm">
-    
-    <div class="stackSubscribeForm">
-    
-    <input 
-    type="email" 
-    id="emailInput"
-    placeholder="Enter your email address*"
-    />
-    
-    <button type="submit">Subscribe Now</button>
-    
-    </div>
-    
-    <div class="stackSubscribeCheck">
-    
-    <!-- <input type="checkbox" id="robotCheck"> -->
-    
-    <!-- <label for="robotCheck">I am human</label> -->
-    
-    </div>
-    
-    <p id="formError"></p>
-    
-    </form>
-    
-    </div>
-    
-    
-    <!-- RIGHT IMAGE -->
-    
-    <div class="stackSubscribeImage">
-    
-    <img src="meet7.webp">
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    
-    
-    <style>
-    
-    /* SECTION */
-    
-    #stackSubscribe{
-    
-    padding:120px 20px;
-    background:linear-gradient(135deg,#0c0c0c,#1a1a1a);
-    color:white;
-    font-family:Poppins,sans-serif;
-    
-    }
-    
-    /* CONTAINER */
-    
-    .stackSubscribeContainer{
-    
-    max-width:1200px;
-    margin:auto;
-    
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-    
-    }
-    
-    /* CONTENT */
-    
-    .stackSubscribeContent h2{
-    
-    font-size:42px;
-    margin-bottom:30px;
-    
-    }
-    
-    /* FORM */
-    
-    .stackSubscribeForm{
-    
-    display:flex;
-    gap:15px;
-    margin-bottom:20px;
-    
-    }
-    
-    .stackSubscribeForm input{
-    
-    flex:1;
-    padding:16px;
-    border-radius:6px;
-    border:none;
-    font-size:16px;
-    
-    }
-    
-    .stackSubscribeForm button{
-    
-    background:#ff4c3b;
-    border:none;
-    color:white;
-    padding:16px 25px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:600;
-    
-    }
-    
-    .stackSubscribeForm button:hover{
-    
-    background:#ff2d1a;
-    
-    }
-    
-    /* CHECKBOX */
-    
-    .stackSubscribeCheck{
-    
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:10px;
-    
-    }
-    
-    .stackSubscribeCheck input{
-    
-    width:18px;
-    height:18px;
-    
-    }
-    
-    /* ERROR */
-    
-    #formError{
-    
-    color:#ff4c4c;
-    font-size:14px;
-    
-    }
-    
-    /* IMAGE */
-    
-    .stackSubscribeImage img{
-    
-    width:100%;
-    border-radius:10px;
-    object-fit:cover;
-    
-    }
-    
-    /* RESPONSIVE */
-    
-    @media(max-width:992px){
-    
-    .stackSubscribeContainer{
-    
-    grid-template-columns:1fr;
-    
-    }
-    
-    .stackSubscribeImage{
-    
-    order:-1;
-    
-    }
-    
-    .stackSubscribeContent h2{
-    
-    font-size:32px;
-    
-    }
-    
-    }
-    
-    @media(max-width:600px){
-    
-    #stackSubscribe{
-    
-    padding:80px 20px;
-    
-    }
-    
-    .stackSubscribeForm{
-    
-    flex-direction:column;
-    
-    }
-    
-    .stackSubscribeForm button{
-    
-    width:100%;
-    
-    }
-    
-    }
-    
-    </style>
-    
-    
-    
-    <script>
-    
-    /* FORM VALIDATION */
-    
-    document.getElementById("subscribeForm").addEventListener("submit",function(e){
-    
-    e.preventDefault()
-    
-    let email=document.getElementById("emailInput").value
-    let robot=document.getElementById("robotCheck").checked
-    let error=document.getElementById("formError")
-    
-    if(email=="" && !robot){
-    
-    error.innerText="Please fill email and confirm you are human."
-    
-    return
-    
-    }
+
+        <style>
+            /* SECTION */
+
+.stkSubx-section{
+
+position:relative;
+
+padding:120px 20px;
+
+font-family:Poppins,sans-serif;
+
+background:url("./meet1.webp") center/cover no-repeat;
+
+overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.stkSubx-overlay{
+
+position:absolute;
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.65);
+
+z-index:1;
+
+}
+
+/* CONTAINER */
+
+.stkSubx-container{
+
+position:relative;
+z-index:2;
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+color:white;
+
+}
+
+
+/* CONTENT */
+
+.stkSubx-content h2{
+
+font-size:42px;
+margin-bottom:30px;
+
+}
+
+/* FORM */
+
+.stkSubx-form{
+
+display:flex;
+gap:15px;
+
+margin-bottom:10px;
+
+}
+
+/* INPUT */
+
+.stkSubx-form input{
+
+flex:1;
+
+padding:16px;
+
+border-radius:8px;
+
+border:none;
+
+font-size:16px;
+
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(6px);
+
+color:white;
+
+}
+
+/* BUTTON */
+
+.stkSubx-form button{
+
+background:#ff4c3b;
+
+border:none;
+
+color:white;
+
+padding:16px 25px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.stkSubx-form button:hover{
+
+background:#ff2d1a;
+transform:scale(1.05);
+
+}
+
+/* ERROR */
+
+#stkSubxError{
+
+color:#ff6b6b;
+font-size:14px;
+
+}
+
+
+/* IMAGE */
+
+.stkSubx-image img{
+
+width:100%;
+
+border-radius:14px;
+
+object-fit:cover;
+
+transition:0.6s;
+
+}
+
+/* HOVER */
+
+.stkSubx-image:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.stkSubx-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.stkSubx-image{
+
+order:-1;
+
+}
+
+.stkSubx-content h2{
+
+font-size:32px;
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.stkSubx-section{
+
+padding:80px 20px;
+
+}
+
+.stkSubx-form{
+
+flex-direction:column;
+
+}
+
+.stkSubx-form button{
+
+width:100%;
+
+}
+
+}
+        </style>
+
+<script>
+document.getElementById("stkSubxForm").addEventListener("submit",function(e){
+
+    e.preventDefault();
+    
+    let email=document.getElementById("stkSubxEmail").value;
+    
+    let error=document.getElementById("stkSubxError");
     
     if(email==""){
     
-    error.innerText="Please enter your email address."
-    
-    return
-    
-    }
-    
-    if(!robot){
-    
-    error.innerText="Please confirm you are human."
-    
-    return
+    error.innerText="Please enter your email address.";
+    return;
     
     }
     
     /* SUCCESS → GO TO 404 PAGE */
     
-    window.location.href="404.html"
+    window.location.href="404.html";
     
-    })
-    
+    });
+
     </script>
+
+    <!-- <footer> -->
+        <footer class="footer">
+            <div class="footer-container">
+        
+                <!-- Logo / About -->
+                <div class="footer-box">
+                    <img src="./logo.webp" alt="Stackly Logo" class="footer-logo"  style="height:60px;">
+       
+                   
+                    <!-- <p>We deliver secure, scalable and innovative IT services for global businesses.</p><br> -->
+        
+                    <!-- Social Icons -->
+                    <div class="footer-social">
+                        <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+        
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="./home2.html">Home</a></li>
+                        <li><a href="./solution.html">Solution</a></li>
+                        <li><a href="./pricing1.html">Pricing</a></li>
+                        <li><a href="./contact1.html">Contact</a></li>
+    
+                    </ul>
+                </div>
+        
+                <!-- Address -->
+                <div class="footer-box">
+                    <h3>Our Address</h3>
+                    <p>
+                        MMR complex.<br>
+                        chinna tirupathi kovil street,<br>
+                        salem,Tamil nadu-636008<br>
+                        <!-- Bengaluru, Karnataka – 560066<br> -->
+                        India<br><br>
+        
+                        <strong>Phone:</strong> +91 98765 43210<br>
+                        <strong>Email:</strong> support@thestackly.com
+                    </p>
+                </div>
+        
+                <!-- Google Map -->
+                <div class="footer-box">
+                    <h3>Location</h3>
+                    <iframe 
+                    src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+        
+            </div>
+        
+            <div class="footer-bottom">
+                <p>© 2025 stackly | All Rights Reserved</p>
+            </div>
+        </footer>
+    
+        
+    
+    
+    <script src="./script.js"></script>
+    </body>
+    </html>
