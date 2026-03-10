@@ -570,32 +570,35 @@ el.classList.add("active");
 window.addEventListener("scroll", revealOnScroll);
 </script>
 
-<section class="stkx-feature-section">
+<!-- STACKLY FEATURE SECTION -->
 
-    <h2 class="stkx-feature-title stkx-reveal">Our Powerful Features</h2>
+<section class="stk-feature-section">
+
+    <h2 class="stk-feature-title">Our Powerful Features</h2>
     
-    <div class="stkx-feature-wrapper">
+    <div class="stk-feature-wrapper">
     
     <!-- LEFT IMAGES -->
-    <div class="stkx-images-left">
     
-    <div class="stkx-img-box square stkx-reveal">
+    <div class="stk-feature-images-left">
     
-    <img src="./meet1.webp" class="stkx-img">
+    <div class="stk-feature-img-box stk-square">
     
-    <div class="stkx-review">
-    <div class="stkx-stars">★★★★★</div>
+    <img src="./meet1.webp" class="stk-feature-img">
+    
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
     <p>3 Client Reviews</p>
     </div>
     
     </div>
     
-    <div class="stkx-img-box rectangle stkx-reveal">
+    <div class="stk-feature-img-box stk-rectangle">
     
-    <img src="./meet2.webp" class="stkx-img">
+    <img src="./meet2.webp" class="stk-feature-img">
     
-    <div class="stkx-review">
-    <div class="stkx-stars">★★★★★</div>
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
     <p>3 Client Reviews</p>
     </div>
     
@@ -606,37 +609,32 @@ window.addEventListener("scroll", revealOnScroll);
     
     <!-- CENTER CONTENT -->
     
-    <div class="stkx-content">
+    <div class="stk-feature-content">
     
-    <div class="stkx-card stkx-reveal">
+    <div class="stk-feature-card">
     
     <h3>HD Video Meetings</h3>
-    
-    <p>Crystal clear HD video meetings.</p>
-    <p>Connect teams globally without interruptions.</p>
-    <p>Reliable performance for remote collaboration.</p>
+    <p class="line">Crystal clear HD video meetings.</p>
+    <p class="line">Connect teams globally without interruptions.</p>
+    <p class="line">Reliable performance for remote collaboration.</p>
     
     </div>
     
-    
-    <div class="stkx-card stkx-reveal">
+    <div class="stk-feature-card">
     
     <h3>Screen Sharing</h3>
-    
-    <p>Share presentations instantly.</p>
-    <p>Collaborate on projects in real time.</p>
-    <p>Enhance productivity during meetings.</p>
+    <p class="line">Share presentations instantly.</p>
+    <p class="line">Collaborate on projects in real time.</p>
+    <p class="line">Enhance productivity during meetings.</p>
     
     </div>
     
-    
-    <div class="stkx-card stkx-reveal">
+    <div class="stk-feature-card">
     
     <h3>Smart Scheduling</h3>
-    
-    <p>Schedule meetings quickly.</p>
-    <p>Automated reminders and notifications.</p>
-    <p>AI-powered meeting management.</p>
+    <p class="line">Schedule meetings quickly.</p>
+    <p class="line">Automated reminders and notifications.</p>
+    <p class="line">AI-powered meeting management.</p>
     
     </div>
     
@@ -645,25 +643,25 @@ window.addEventListener("scroll", revealOnScroll);
     
     <!-- RIGHT IMAGES -->
     
-    <div class="stkx-images-right">
+    <div class="stk-feature-images-right">
     
-    <div class="stkx-img-box rectangle stkx-reveal">
+    <div class="stk-feature-img-box stk-rectangle">
     
-    <img src="./meet3.webp" class="stkx-img">
+    <img src="./meet3.webp" class="stk-feature-img">
     
-    <div class="stkx-review">
-    <div class="stkx-stars">★★★★★</div>
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
     <p>3 Client Reviews</p>
     </div>
     
     </div>
     
-    <div class="stkx-img-box square stkx-reveal">
+    <div class="stk-feature-img-box stk-square">
     
-    <img src="./meet6.webp" class="stkx-img">
+    <img src="./meet6.webp" class="stk-feature-img">
     
-    <div class="stkx-review">
-    <div class="stkx-stars">★★★★★</div>
+    <div class="stk-review-badge">
+    <div class="stk-stars">★★★★★</div>
     <p>3 Client Reviews</p>
     </div>
     
@@ -674,340 +672,223 @@ window.addEventListener("scroll", revealOnScroll);
     </div>
     
     </section>
-
-
+    
+    
+    
     <style>
-        /* SECTION */
-
-.stkx-feature-section{
-
-padding:120px 6%;
-font-family:Poppins,sans-serif;
-
-/* animated gradient background */
-
-background:linear-gradient(-45deg,#e8f0ff,#f0f9ff,#f6f7ff,#eef2ff);
-background-size:400% 400%;
-animation:stkxGradient 12s ease infinite;
-
-overflow:hidden;
-
-}
-
-@keyframes stkxGradient{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-
-}
-
-
-/* TITLE */
-
-.stkx-feature-title{
-
-text-align:center;
-font-size:42px;
-font-weight:700;
-margin-bottom:80px;
-
-background:linear-gradient(90deg,#2563eb,#06b6d4);
--webkit-background-clip:text;
-color:transparent;
-
-}
-
-
-/* GRID */
-
-.stkx-feature-wrapper{
-
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:50px;
-align-items:center;
-
-}
-
-
-/* IMAGE COLUMN */
-
-.stkx-images-left,
-.stkx-images-right{
-
-display:flex;
-flex-direction:column;
-gap:40px;
-align-items:center;
-
-}
-
-
-/* IMAGE BOX */
-
-.stkx-img-box{
-
-position:relative;
-overflow:hidden;
-cursor:pointer;
-
-animation:stkxFloat 6s ease-in-out infinite;
-
-}
-
-
-/* SHAPES */
-
-.stkx-img-box.square{
-
-width:260px;
-height:260px;
-border-radius:30px;
-
-}
-
-.stkx-img-box.rectangle{
-
-width:260px;
-height:360px;
-border-radius:40px;
-
-}
-
-
-/* IMAGE */
-
-.stkx-img{
-
-width:100%;
-height:100%;
-object-fit:cover;
-
-filter:blur(3px);
-
-transition:.6s;
-
-}
-
-
-/* HOVER EFFECT */
-
-.stkx-img-box:hover .stkx-img{
-
-filter:blur(0);
-transform:scale(1.15);
-
-}
-
-
-/* FLOATING ANIMATION */
-
-@keyframes stkxFloat{
-
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
-
-}
-
-
-/* REVIEW BADGE */
-
-.stkx-review{
-
-position:absolute;
-bottom:15px;
-right:15px;
-
-width:90px;
-height:90px;
-
-border-radius:50%;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-
-font-size:10px;
-
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.7);
-
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-
-}
-
-
-/* STARS */
-
-.stkx-stars{
-
-color:#f59e0b;
-font-size:14px;
-
-}
-
-
-/* CONTENT */
-
-.stkx-content{
-
-display:flex;
-flex-direction:column;
-gap:40px;
-
-}
-
-
-/* CARD */
-
-.stkx-card{
-
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(8px);
-
-padding:28px;
-border-radius:20px;
-
-box-shadow:0 15px 30px rgba(0,0,0,0.08);
-
-transition:.4s;
-
-}
-
-
-.stkx-card:hover{
-
-transform:translateY(-6px);
-
-}
-
-
-/* HEADING */
-
-.stkx-card h3{
-
-font-size:22px;
-margin-bottom:12px;
-color:#0f172a;
-
-}
-
-
-/* TEXT */
-
-.stkx-card p{
-
-color:#475569;
-margin-bottom:6px;
-
-}
-
-
-/* SCROLL REVEAL */
-
-.stkx-reveal{
-
-opacity:0;
-transform:translateY(60px);
-transition:all .8s ease;
-
-}
-
-.stkx-reveal.active{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-
-/* TABLET */
-
-@media(max-width:1024px){
-
-.stkx-feature-wrapper{
-
-grid-template-columns:1fr;
-text-align:center;
-
-}
-
-.stkx-images-left,
-.stkx-images-right{
-
-flex-direction:row;
-justify-content:center;
-
-}
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.stkx-feature-title{
-
-font-size:30px;
-
-}
-
-.stkx-img-box.square{
-
-width:170px;
-height:170px;
-
-}
-
-.stkx-img-box.rectangle{
-
-width:170px;
-height:240px;
-
-}
-
-.stkx-review{
-
-width:70px;
-height:70px;
-
-}
-
-}
+    
+    /* SECTION */
+    
+    .stk-feature-section{
+    padding:80px 8%;
+    background:#f8fafc;
+    overflow:hidden;
+    }
+    
+    /* TITLE */
+    
+    .stk-feature-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:60px;
+    font-weight:700;
+    }
+    
+    /* WRAPPER */
+    
+    .stk-feature-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    }
+    
+    /* IMAGE COLUMNS */
+    
+    .stk-feature-images-left,
+    .stk-feature-images-right{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    }
+    
+    /* IMAGE BOX */
+    
+    .stk-feature-img-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    /* IMAGE */
+    
+    .stk-feature-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.6s ease, filter 0.5s ease;
+    animation:stkZoomMove 10s ease-in-out infinite;
+    }
+    
+    /* ZOOM IN OUT ANIMATION */
+    
+    @keyframes stkZoomMove{
+    
+    0%{ transform:scale(1); }
+    
+    50%{ transform:scale(1.06); }
+    
+    100%{ transform:scale(1); }
+    
+    }
+    
+    /* HOVER EFFECT */
+    
+    .stk-feature-img-box:hover .stk-feature-img{
+    transform:scale(1.2);
+    filter:blur(2px);
+    }
+    
+    /* IMAGE SHAPES */
+    
+    .stk-square{
+    width:250px;
+    height:250px;
+    }
+    
+    .stk-rectangle{
+    width:250px;
+    height:160px;
+    }
+    
+    /* REVIEW BADGE */
+    
+    .stk-review-badge{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    background:white;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:13px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .stk-stars{
+    color:#facc15;
+    font-size:14px;
+    }
+    
+    /* CONTENT */
+    
+    .stk-feature-content{
+    max-width:420px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    }
+    
+    .stk-feature-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+    }
+    
+    .stk-feature-card .line{
+    font-size:15px;
+    color:#555;
+    margin-bottom:5px;
+    }
+    
+    /* LAPTOP */
+    
+    @media (max-width:1200px){
+    
+    .stk-square{
+    width:220px;
+    height:220px;
+    }
+    
+    .stk-rectangle{
+    width:220px;
+    height:150px;
+    }
+    
+    .stk-feature-wrapper{
+    gap:30px;
+    }
+    
+    }
+    
+    /* TABLET */
+    
+    @media (max-width:992px){
+    
+    .stk-feature-wrapper{
+    flex-direction:column;
+    }
+    
+    .stk-feature-images-left,
+    .stk-feature-images-right{
+    flex-direction:row;
+    justify-content:center;
+    }
+    
+    .stk-square{
+    width:200px;
+    height:200px;
+    }
+    
+    .stk-rectangle{
+    width:200px;
+    height:140px;
+    }
+    
+    .stk-feature-content{
+    text-align:center;
+    }
+    
+    }
+    
+    /* MOBILE */
+    
+    @media (max-width:600px){
+    
+    .stk-feature-title{
+    font-size:28px;
+    }
+    
+    .stk-feature-images-left,
+    .stk-feature-images-right{
+    flex-direction:column;
+    width:100%;
+    align-items:center;
+    }
+    
+    .stk-feature-img-box{
+    width:100%;
+    max-width:320px;
+    }
+    
+    .stk-square{
+    width:100%;
+    height:220px;
+    }
+    
+    .stk-rectangle{
+    width:100%;
+    height:180px;
+    }
+    
+    .stk-feature-content{
+    width:100%;
+    text-align:center;
+    }
+    
+    }
+    
     </style>
-    <Script>
-
-const stkxReveal = document.querySelectorAll(".stkx-reveal");
-
-function stkxRevealScroll(){
-
-stkxReveal.forEach((el,index)=>{
-
-const windowHeight = window.innerHeight;
-const elementTop = el.getBoundingClientRect().top;
-
-if(elementTop < windowHeight - 100){
-
-setTimeout(()=>{
-
-el.classList.add("active");
-
-}, index*200);
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", stkxRevealScroll);
-</script>
-
-
     <!-- <footer> -->
         <footer class="footer">
             <div class="footer-container">
