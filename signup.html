@@ -200,15 +200,105 @@ Already have an account?
 
 </div>
 
-<div class="logos">
-    <a href="./404.html">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732221.png">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png">
-<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732229.png">
-</a>
-</div>
+<section class="stkly-brand-wrapper">
+    <div class="stkly-brand-logos">
+        <a class="stkly-brand-link" href="./404.html">
+            <img class="stkly-brand-img" src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="HTML">
+        </a>
+
+        <a class="stkly-brand-link" href="./404.html">
+            <img class="stkly-brand-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="CSS">
+        </a>
+
+        <a class="stkly-brand-link" href="./404.html">
+            <img class="stkly-brand-img" src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Java">
+        </a>
+
+        <a class="stkly-brand-link" href="./404.html">
+            <img class="stkly-brand-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" alt="Bootstrap">
+        </a>
+
+        <a class="stkly-brand-link" href="./404.html">
+            <img class="stkly-brand-img" src="https://cdn-icons-png.flaticon.com/512/732/732229.png" alt="JS">
+        </a>
+    </div>
+</section>
+
+<style>
+    /* ===== STACKLY BRAND LOGOS ===== */
+
+.stkly-brand-wrapper{
+    width:100%;
+    padding:30px 15px;
+}
+
+.stkly-brand-logos{
+    max-width:1200px;
+    margin:0 auto;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+}
+
+.stkly-brand-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.stkly-brand-img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    display:block;
+    transition:transform .3s ease;
+}
+
+.stkly-brand-img:hover{
+    transform:scale(1.08) translateY(-5px);
+}
+
+/* Laptop */
+@media screen and (max-width:1200px){
+    .stkly-brand-logos{
+        gap:25px;
+    }
+
+    .stkly-brand-img{
+        width:65px;
+        height:65px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width:768px){
+    .stkly-brand-logos{
+        gap:20px;
+    }
+
+    .stkly-brand-img{
+        width:55px;
+        height:55px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:480px){
+    .stkly-brand-logos{
+        gap:14px;
+    }
+
+    .stkly-brand-img{
+        width:42px;
+        height:42px;
+    }
+}
+</style>
 
 <script>
 
